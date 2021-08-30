@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#leigh {
+    /* fill: #1b46d3; */
+    fill: white;
+    filter: drop-shadow(3px 3px 3px #999);
+}
+
+#svgframe {
+    height: 400px;
+    width: auto;
+}
+
+#svgframe:hover {
+    /* filter: url(#pictureFilter); */
+    filter: blur(2px);
+    /* fill: #1b46d36e; */
+    /* filter: none; */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
