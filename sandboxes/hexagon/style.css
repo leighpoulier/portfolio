@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --hexagon-diameter: 200px;
+    --hexagon-gap: 0px;
+    --maths-root3on2: 0.866025404;
+}
+
+/* required to hide the svg definitions and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
+.defs-clip-svg {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.hexagon-horizontal {
+    clip-path: url("#clip-hexagon-horizontal");
+}
+
+.hexagon-vertical {
+    clip-path: url("#clip-hexagon-vertical");
+}
+
+.hexagon-bunch {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.hexagon-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hexagon-gap);
+    width: calc((var(--hexagon-diameter) * 0.75) + (var(--hexagon-gap) * var(--maths-root3on2)));
+    position: relative;
+    counter-reset: row;
+    counter-set: row -1;
+}
+
+.hexagon-column:nth-child(even) {
+    top: calc((var(--hexagon-diameter)*var(--maths-root3on2) + var(--hexagon-gap)) / 2);
+    counter-set: row 0;
+}
+
+
+.hexagon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--hexagon-diameter) * var(--maths-root3on2));
+    width: calc(var(--hexagon-diameter));
+}
+
+.hexagon {
+    height: calc(var(--hexagon-diameter) * var(--maths-root3on2));
+    width: calc(var(--hexagon-diameter));
+    background-color: blue;
+    /* content: counter(row); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    counter-increment: row 2;
+}
+ 
+.hexagon.row2 {
+    height: 95%;
+    width: 95%;
+}
+
+.hexagon.row3 {
+    height: 90%;
+    width: 90%;
+}
+
+.hexagon.row4 {
+    height: 85%;
+    width: 85%;;
+}
+
+.hexagon.row5 {
+    height: 80%;;
+    width: 80%;
+}
+
+.hexagon.row6 {
+    height: 75%;
+    width: 75%;
+}
+
+.hexagon.row7 {
+    height: 70%;
+    width: 70%;
+}
+
+.hexagon.row8 {
+    height: 65%;
+    width: 65%;
+}
+
+.hexagon.row9 {
+    height: 60%;
+    width: 60%;
+}
+
+.hexagon.row10 {
+    height: 55%;
+    width: 55%;
+}
+
+.hexagon.row11 {
+    height: 50%;
+    width: 50%;
+}
+
+.hexagon.row12 {
+    height: 45%;
+    width: 45%;
+}
+
+.hexagon:before {
+    content: "Row " counter(row);
+    display: block
+}
