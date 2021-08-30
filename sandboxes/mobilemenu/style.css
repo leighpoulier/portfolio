@@ -1,0 +1,137 @@
+:root {
+    --maths-root3on2: 0.866025404;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border-style: none;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    /* font-size: 80%; */
+}
+
+
+/* required to hide the svg definitions and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
+
+.defs-clip-svg {
+    position: absolute;
+    z-index: -999;
+    /* visibility: hidden; */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.hamburger-container {
+    /* position is required so that the child element hamburger can be position absolute relative to this element */
+    position: relative;
+    display: flex;
+    left: 1rem;
+    top: 1rem;
+    height: calc(5rem * var(--maths-root3on2));
+    width: 5rem;
+    align-items: center;
+    justify-content: center;
+    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    background-color: #46B2B27F;
+}
+
+.hamburger-container:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: white;
+    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    z-index: -2;
+}
+
+.hamburger-bar {
+    /* width: 1.8rem; */
+    /* height: 0.3rem; */
+    /* margin: 0.3rem 0; */
+    /* border-radius: 0.15rem; */
+    /* width: 30px; */
+    /* height: 5px; */
+    /* margin: 5px 0; */
+    /* border-radius: 2.5px; */
+    width: 36px;
+    height: 6px;
+    margin: 6px 0;
+    border-radius: 3px;
+    background-color: black;
+    border-style: none;
+}
+
+
+/* This is the grey circle behind the hamburger */
+
+.hamburger::before {
+    content: '';
+    display: block;
+    position: absolute;
+    /* 3px because of the existing 3px false border on the underlying .hamburger::before So it joins up to be a solid surface (if overlap then the alphas add together*/
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    z-index: -1;
+    /* border-radius: 50%; */
+    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    background: none;
+    opacity: 0;
+    transform: scale(0);
+    transition-property: transform, opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+
+/* This is the hexagonal hover area above the hamburger */
+
+.hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    /* border-radius: 50%; */
+    clip-path: url("#clip-hexagon-horizontal-preshaped");
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger:hover::before,
+.hamburger:active::before {
+    /* background-color: #555; */
+    /* background-color: rgba(32, 33, 36, 0.059); */
+    background-color: #46B2B27F;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--teal-2); */
+}
