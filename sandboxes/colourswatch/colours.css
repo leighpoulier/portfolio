@@ -1,0 +1,53 @@
+/* first 4 */
+
+
+/* https://paletton.com/#uid=63L0X0kw0w0jyC+oRxVy4oIDfjr */
+
+
+/* second 4 */
+
+
+/* https://paletton.com/#uid=64e0X0kw0w0jyC+oRxVy4oIDfjr */
+
+:root {
+    --blue-lightest: #1240AB;
+    --blue-lighter: #5777C0;
+    --blue: #365BB0;
+    --blue-darker: #0D3184;
+    --blue-darkest: #082568;
+    --purple-lightest: #7309AA;
+    --purple-lighter: #9A50BF;
+    --purple: #842EAF;
+    --purple-darker: #590683;
+    --purple-darkest: #460467;
+    --green-lightest: #00CC00;
+    --green-lighter: #54D954;
+    --green: #2ECF2E;
+    --green-darker: #009E00;
+    --green-darkest: #007C00;
+    --orange-lightest: #FFAA00;
+    --orange-lighter: #FFCB63;
+    --orange: #FFBD39;
+    --orange-darker: #C58300;
+    --orange-darkest: #9B6700;
+    --violet-lightest: #3914AF;
+    --violet-lighter: #735AC3;
+    --violet: #5638B4;
+    --violet-darker: #2B0E88;
+    --violet-darkest: #20096A;
+    --pink-lightest: #CE0071;
+    --pink-lighter: #DA559E;
+    --pink: #D12F87;
+    --pink-darker: #9F0057;
+    --pink-darkest: #7D0044;
+    --teal-lightest: #009999;
+    --teal-lighter: #46B2B2;
+    --teal: #249F9F;
+    --teal-darker: #007676;
+    --teal-darkest: #005D5D;
+    --yellow-lightest: #FFD300;
+    --yellow-lighter: #FFE463;
+    --yellow: #FFDD39;
+    --yellow-darker: #C5A300;
+    --yellow-darkest: #9B8000;
+}
