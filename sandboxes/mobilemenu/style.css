@@ -33,19 +33,35 @@ header {
     align-items: stretch;
 }
 
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--teal-2); */
+}
+
 .hamburger-container {
     /* position is required so that the child element hamburger can be position absolute relative to this element */
     position: relative;
     display: flex;
     left: 1rem;
     top: 1rem;
-    height: calc(5rem * var(--maths-root3on2));
+    /* height: calc(5rem * var(--maths-root3on2)); */
+    height: 5rem;
     width: 5rem;
     align-items: center;
     justify-content: center;
-    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    clip-path: url("#clip-hexagon-horizontal-square");
     background-color: #46B2B27F;
 }
+
+.hamburger-container {
+    /* visibility: hidden; */
+}
+
+
+/* create false border around container */
 
 .hamburger-container:before {
     content: "";
@@ -55,7 +71,7 @@ header {
     right: 3px;
     bottom: 3px;
     background: white;
-    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    clip-path: url("#clip-hexagon-horizontal-square");
     z-index: -2;
 }
 
@@ -74,6 +90,48 @@ header {
     border-radius: 3px;
     background-color: black;
     border-style: none;
+}
+
+.close-button-bar {
+    width: 50px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: black;
+    border-style: none;
+}
+
+#close-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    /* position: relative; */
+    /* top: 1rem; */
+    /* left: 1rem; */
+}
+
+#close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button-bar-container {
+    position: absolute;
+}
+
+.close-button-bar {
+    /* position: absolute; */
+}
+
+#close-button-bar-1 {
+    transform: rotate(45deg);
+}
+
+#close-button-bar-2 {
+    transform: rotate(-45deg);
 }
 
 
@@ -128,10 +186,21 @@ header {
     transform: scale(1);
 }
 
-#navbar {
+nav {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border: 1px red solid;
+}
+
+nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: var(--teal-2); */
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav li {
+    padding: 0.5rem;
 }
