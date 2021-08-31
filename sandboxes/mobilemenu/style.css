@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -15,6 +19,12 @@ html {
     border-style: none;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     /* font-size: 80%; */
+}
+
+body {
+    position: relative;
+    height: 100%;
+    padding: 1rem;
 }
 
 
@@ -38,32 +48,39 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* background-color: var(--teal-2); */
+    /* background-color: var(--teal-2-50); */
 }
 
-.hamburger-container {
-    /* position is required so that the child element hamburger can be position absolute relative to this element */
-    position: relative;
+#hamburger-container,
+#close-button-container {
     display: flex;
-    left: 1rem;
-    top: 1rem;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
     /* height: calc(5rem * var(--maths-root3on2)); */
     height: 5rem;
     width: 5rem;
-    align-items: center;
-    justify-content: center;
     clip-path: url("#clip-hexagon-horizontal-square");
-    background-color: #46B2B27F;
 }
 
-.hamburger-container {
-    /* visibility: hidden; */
+#hamburger-container {
+    /* position is required so that the child element hamburger can be position absolute relative to this element */
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background-color: var(--teal-2-50);
+}
+
+#close-button-container {
+    position: relative;
+    background-color: var(--purple-2-50);
 }
 
 
 /* create false border around container */
 
-.hamburger-container:before {
+#hamburger-container:before,
+#close-button-container:before {
     content: "";
     position: absolute;
     top: 3px;
@@ -100,30 +117,16 @@ header {
     border-style: none;
 }
 
-#close-button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-    width: 5rem;
-    /* position: relative; */
-    /* top: 1rem; */
-    /* left: 1rem; */
-}
-
 #close-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 3rem;
+    width: 3rem;
 }
 
 .close-button-bar-container {
     position: absolute;
-}
-
-.close-button-bar {
-    /* position: absolute; */
 }
 
 #close-button-bar-1 {
@@ -135,9 +138,10 @@ header {
 }
 
 
-/* This is the grey circle behind the hamburger */
+/* This is the grey hex behind the hamburger */
 
-.hamburger::before {
+#hamburger::before,
+#close-button::before {
     content: '';
     display: block;
     position: absolute;
@@ -148,7 +152,7 @@ header {
     left: 3px;
     z-index: -1;
     /* border-radius: 50%; */
-    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    clip-path: url("#clip-hexagon-horizontal-square");
     background: none;
     opacity: 0;
     transform: scale(0);
@@ -160,7 +164,8 @@ header {
 
 /* This is the hexagonal hover area above the hamburger */
 
-.hamburger::after {
+#hamburger::after,
+#close-button::after {
     content: '';
     display: block;
     position: absolute;
@@ -170,37 +175,84 @@ header {
     left: 0;
     z-index: 1;
     /* border-radius: 50%; */
-    clip-path: url("#clip-hexagon-horizontal-preshaped");
+    clip-path: url("#clip-hexagon-horizontal-square");
 }
 
-.hamburger:hover {
+#hamburger:hover,
+#close-button:hover {
     cursor: pointer;
 }
 
-.hamburger:hover::before,
-.hamburger:active::before {
-    /* background-color: #555; */
-    /* background-color: rgba(32, 33, 36, 0.059); */
-    background-color: #46B2B27F;
+#hamburger:hover::before,
+#hamburger:active::before,
+#close-button:hover::before,
+#close-button:active::before {
     opacity: 1;
     transform: scale(1);
 }
 
+#hamburger:hover::before,
+#hamburger:active::before {
+    background-color: var(--teal-2-50);
+}
+
+#close-button:hover::before,
+#close-button:active::before {
+    background-color: var(--purple-2-50);
+}
+
 nav {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    border: 1px red solid;
+    top: 0rem;
+    left: 0rem;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    z-index: 5;
+    /* top: -9999px; */
+    /* opacity: 100; */
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    top: -100%;
+}
+
+.nav-up {
+    opacity: 0;
+    /* top: -100%; */
+    /* display: none; */
+}
+
+.nav-down {
+    opacity: 100;
+    /* display: block; */
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 1rem;
     list-style: none;
 }
 
-nav li {
-    padding: 0.5rem;
+
+/* nav li {
+    padding: 1rem;
+} */
+
+nav a {
+    display: block;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    font-weight: bold;
+    color: var(--blue-2);
+    transition-property: color, background;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+nav a:hover {
+    background: var(--blue-2);
+    color: white;
 }
