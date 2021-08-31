@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450" height="300" content='&lt;mxfile host="Electron" modified="2021-08-31T08:51:28.280Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.9.6 Chrome/89.0.4389.128 Electron/12.0.16 Safari/537.36" etag="--GpfSm3VfjWcCtgfBfe" version="14.9.6" type="device"&gt;&lt;diagram id="4_GJgHw_fhTFv9cB8BqI" name="Page-1"&gt;7Vldb5swFP010Z4yAQZCHvPZTkq1qpnWtS+TCw5xa3BkTJPs188OJkAgWZSmBE1RH4qv7Yt9z7nHl7gFBsHqhsHF/I56iLQMzVu1wLBlGLquGeKftKwTi2Mpg8+wpwZlhin+g5RRU9YYeygqDOSUEo4XRaNLwxC5vGCDjNFlcdiMkuJbF9BHJcPUhaRsfcQen6f7srtZxy3C/ly92jE6SUcA08FqJ9EcenSZM4FRCwwYpTx5ClYDRGTw0rgk88Z7ercLYyjkx0zQ8Bv6GQ+MZ+QF7bb1HP5o+23l5R2SWG34lgZILZiv0ygwGoceko70Fugv55ij6QK6sncpcBe2OQ+I6p7RkI9hgImE/IG+UE6lFRMyoISyjUcwtjTN6Ql7xBl9Q2lPSEOkXCgu6HbaVsvRyhtPd4EYR6ucSQXiBok9cbYWQ1SvZVjJFMVKAyivyxzGKXDzHLy2skFFK3/rOou8eFDBrwbifbSamE9k+u2PdTP0vyMdvP5umyUgSiAgTzBTNSnjc+rTEJJRZu1nMGmilY2ZULpQ4LwiztcqtDDeIJOHrgiSZyHHM4UdrTD/Jd1+tVTrSc2Qz8OVeuOmsVaNKhoY2h3ycBxscU9zCpSYIF7fH8s/0bMX8YjGzEUH+K2iyCHzET8QfpCMkyE+yB+GCOT4vSgOVWRQU+8pFkve8s5MOaV4B7o7fEo2pGbtUGq7jKNYdigcOZb1XmjMN7jUkPSaNnY07VJJD+yd4HdqTPpKOMARSR96PXmMiZZLYBRhtxj3UzJThJCtc5Nk8ynfl03btLYZvaMOEDkztymZnhYHuUw/lAL/zPQcKawKTqS2DwqCbRYPInEqHiUIZUfdoiPT2nGUBKbkSJALrnPDFnJAtH/BllN8DwDawXWVFK84XjwkKzhV5irVvCxzTThMG5Uu1pEHo37ug/FDgmmVgB2IYEKX11Gxjnu9yx1euxXr5Q8vu4RFn1C/lipi1Btd7NPB7jatinCuVUTtVYTVrCrC2eGkfmIVsVdlTq4izv0F072SvXay280i+/9eMneszy2Zq7lQrpmT41y7p1Ed5VWzTnXz4qe6fv1x4HxKZx+pdGkWXKXuzOrSKZF5IsP1JdoIDOMzSrDkxSN6iYSWlJgu0pgXuQ0J9kNJfEEGJJjSl8mOXUh6qiPAnrf5kK9Sp+LHfU5dDHMvZycJvvtpeLzcmDt1ll5x/wBqvX8oXwSNAojltDFlQQ3636zP61r1/9CNRA6Q++FYGB5QFNdyQ9esH+s/ExDRzK5hE8nLLrPB6C8=&lt;/diagram&gt;&lt;/mxfile&gt;' version="1.1" viewBox="-.5 -.5 450 300" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-.5 -100.5)">
+  <rect x="165" y="100" width="120" height="60" rx="9" ry="9" fill="#f5008a" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:166px;padding-top:130px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">Home</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="225" y="135" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">Home</text>
+   </switch>
+  </g>
+  <path d="m60 300v29.9" fill="none" pointer-events="stroke" stroke="#bfbfbf" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="m60 336.65-4.5-9 4.5 2.25 4.5-2.25z" fill="#bfbfbf" pointer-events="all" stroke="#bfbfbf" stroke-miterlimit="10" stroke-width="3"/>
+  <rect y="240" width="120" height="60" rx="9" ry="9" fill="#00f800" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:1px;padding-top:270px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">About Me</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="60" y="275" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">About Me</text>
+   </switch>
+  </g>
+  <g stroke="#bfbfbf" stroke-miterlimit="10" stroke-width="3">
+   <path d="m225 160v30q0 10-10 10h-145q-10 0-10 10v19.9" fill="none" pointer-events="stroke"/>
+   <path d="m60 236.65-4.5-9 4.5 2.25 4.5-2.25z" fill="#bfbfbf" pointer-events="all"/>
+   <path d="m225 300v29.9" fill="none" pointer-events="stroke"/>
+   <path d="m225 336.65-4.5-9 4.5 2.25 4.5-2.25z" fill="#bfbfbf" pointer-events="all"/>
+  </g>
+  <rect x="165" y="240" width="120" height="60" rx="9" ry="9" fill="#fa0" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:166px;padding-top:270px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">Contact</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="225" y="275" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">Contact</text>
+   </switch>
+  </g>
+  <rect x="330" y="240" width="120" height="60" rx="9" ry="9" fill="#00eaea" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:331px;padding-top:270px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">Blog</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="390" y="275" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">Blog</text>
+   </switch>
+  </g>
+  <g stroke="#bfbfbf" stroke-miterlimit="10" stroke-width="3">
+   <path d="m225 160v69.9" fill="none" pointer-events="stroke"/>
+   <path d="m225 236.65-4.5-9 4.5 2.25 4.5-2.25z" fill="#bfbfbf" pointer-events="all"/>
+   <path d="m225 160v30q0 10 10 10h145q10 0 10 10v19.9" fill="none" pointer-events="stroke"/>
+   <path d="m390 236.65-4.5-9 4.5 2.25 4.5-2.25z" fill="#bfbfbf" pointer-events="all"/>
+  </g>
+  <rect x="330" y="340" width="120" height="60" rx="9" ry="9" fill="#00eaea" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:331px;padding-top:370px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">Blog Post</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="390" y="375" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">Blog Post</text>
+   </switch>
+  </g>
+  <path d="m390 300v29.9" fill="none" pointer-events="stroke" stroke="#bfbfbf" stroke-miterlimit="10" stroke-width="3"/>
+  <path d="m390 336.65-4.5-9 4.5 2.25 4.5-2.25z" fill="#bfbfbf" pointer-events="all" stroke="#bfbfbf" stroke-miterlimit="10" stroke-width="3"/>
+  <rect x="165" y="340" width="120" height="60" rx="9" ry="9" fill="#fa0" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:166px;padding-top:370px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">Email Form</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="225" y="375" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">Email Form</text>
+   </switch>
+  </g>
+  <rect y="340" width="120" height="60" rx="9" ry="9" fill="#00f800" pointer-events="all"/>
+  <g transform="translate(-.5 -.5)">
+   <switch>
+    <foreignObject width="100%" height="100%" overflow="visible" pointer-events="none" text-align="left" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+     <xhtml:div display="flex" style="align-items:unsafe center;height:1px;justify-content:unsafe center;margin-left:1px;padding-top:370px;width:118px">
+      <xhtml:div font-size="0" text-align="center" style="box-sizing:border-box">
+       <xhtml:div color="#000000" display="inline-block" font-family="Roboto" font-size="16px" pointer-events="all" style="line-height:1.2;white-space:normal;word-wrap:normal">PDF Resume</xhtml:div>
+      </xhtml:div>
+     </xhtml:div>
+    </foreignObject>
+    <text x="60" y="375" fill="#000000" font-family="Roboto" font-size="16px" text-anchor="middle">PDF Resume</text>
+   </switch>
+  </g>
+ </g>
+</svg>
