@@ -10,12 +10,27 @@
     --maths-root3on2: 0.866025404;
 }
 
+html {
+    height: 100%;
+    background-color: black;
+}
+
+body {
+    margin: 0 auto;
+    width: max-content;
+}
+
+main {
+    width: max-content;
+}
+
+
 /* required to hide the svg definitions and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
+
 .defs-clip-svg {
     position: absolute;
     z-index: -1;
 }
-
 
 .hexagon-horizontal {
     clip-path: url("#clip-hexagon-horizontal");
@@ -46,7 +61,6 @@
     counter-set: row 0;
 }
 
-
 .hexagon-container {
     display: flex;
     justify-content: center;
@@ -58,67 +72,78 @@
 .hexagon {
     height: calc(var(--hexagon-diameter) * var(--maths-root3on2));
     width: calc(var(--hexagon-diameter));
-    background-color: blue;
+    background-color: #054DF4;
     /* content: counter(row); */
     display: flex;
     justify-content: center;
     align-items: center;
     counter-increment: row 2;
 }
- 
+
 .hexagon.row2 {
     height: 95%;
     width: 95%;
+    background-color: #9E02F4;
 }
 
 .hexagon.row3 {
     height: 90%;
     width: 90%;
+    background-color: #00F800;
 }
 
 .hexagon.row4 {
     height: 85%;
-    width: 85%;;
+    width: 85%;
+    background-color: #FFAA00;
 }
 
 .hexagon.row5 {
-    height: 80%;;
+    height: 80%;
     width: 80%;
+    background-color: #4009EF;
 }
 
 .hexagon.row6 {
     height: 75%;
     width: 75%;
+    background-color: #F5008A;
 }
 
 .hexagon.row7 {
     height: 70%;
     width: 70%;
+    background-color: #00EAEA;
 }
 
 .hexagon.row8 {
     height: 65%;
     width: 65%;
+    background-color: #FFD300;
 }
 
 .hexagon.row9 {
     height: 60%;
     width: 60%;
+    background-color: #054DF4;
 }
 
 .hexagon.row10 {
     height: 55%;
     width: 55%;
+    background-color: #9E02F4;
 }
 
 .hexagon.row11 {
     height: 50%;
     width: 50%;
+    background-color: #00F800;
 }
 
 .hexagon.row12 {
     height: 45%;
     width: 45%;
+    background-color: #FFAA00;
 }
 
 .hexagon:before {
