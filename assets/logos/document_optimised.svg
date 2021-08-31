@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="50" content='&lt;mxfile host="Electron" modified="2021-08-31T22:43:48.827Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.9.6 Chrome/89.0.4389.128 Electron/12.0.16 Safari/537.36" etag="mwwE_eLmFJ5TGASaSu6o" version="14.9.6" type="device"&gt;&lt;diagram id="y4ALkXUgV4xuk9qIzCQE" name="Page-1"&gt;jZNNc4IwEIZ/DUcdILbSY0VtD+2M1rE9R1ghY8KmISr21zeR8FXHmV4Y9tmv7JuNR2JRvSgq83dMgXuhn1YemXthGEwj87Xg4gCZ1iBTLHWoAxv2Aw76jh5ZCuUgUCNyzeQQJlgUkOgBo0rheRi2Rz7sKmkGN2CTUH5Lv1iq85pG4bTjr8CyvOkcPD7VHkGbYDdJmdMUzz1EFh6JFaKu/0QVA7faNbrUecs73vZgCgr9n4TdCMLVdntY00//+PG9XE9G1chVOVF+dAO7w+pLowAtZS3snlVgas0kskKDWpxMY6tuYFg7nG+MlJa5jbwauRa8CdIKDxAjR2VIgYXpMON0B3yFJdMMC4MTsMWN4wRKM3MRb38Cdqg1il7AM2eZdWiUhlJntXX2jPOmpxcS3w+iaF4fWdoRRZXZzR2LMqEwvmZJxUoYp5gchRW3lsh0g+qu9kF7o+YlAArQ6mJCXAJ5cEvgXgGJnH3udmriUN5bpyaNui3O2srdRZsfd9eN2e3U1dd7mGTxCw==&lt;/diagram&gt;&lt;/mxfile&gt;' version="1.1" viewBox="-.5 -.5 40 50" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-.5 -.5)" pointer-events="all">
+  <rect width="40" height="50" fill="none"/>
+  <path d="m0 50v-50h27.47l12.53 12.55v37.45zm2.51-2.51h35.03v-33.79h-11.22v-11.19h-23.81zm6.31-6.22v-2.51h22.46v2.51zm22.46-6.28h-22.46v-2.51h22.46zm-22.46-6.28v-2.4h22.46v2.4zm22.46-6.27h-22.46v-2.46h22.46z"/>
+ </g>
+</svg>
