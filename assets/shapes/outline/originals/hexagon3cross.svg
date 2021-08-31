@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48.400002mm"
+   height="41.969219mm"
+   viewBox="0 0 48.400003 41.96922"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="hexagon3cross.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="/mnt/linuxdata/leigh/temp/Shapes/hexagon2cross.png"
+   inkscape:export-xdpi="85.519447"
+   inkscape:export-ydpi="85.519447">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="102.28543"
+     inkscape:cy="81.866881"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g26"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.70000002,-0.70000002)" />
+  <g
+     inkscape:label="Hex Grid"
+     inkscape:groupmode="layer"
+     id="g26"
+     transform="translate(-0.70000002,-0.70000002)">
+    <g
+       id="g20"
+       transform="matrix(3,0,0,3,-0.59999999,-0.59999999)"
+       style="stroke-width:0.13333333;stroke-miterlimit:4;stroke-dasharray:none">
+      <line
+         x1="4.5"
+         y1="0.5"
+         x2="12.5"
+         y2="0.5"
+         style="stroke:#000000;stroke-width:0.13333333;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="line14" />
+      <line
+         x1="4.5"
+         y1="0.5"
+         x2="0.5"
+         y2="7.4282031"
+         style="stroke:#000000;stroke-width:0.13333333;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="line16" />
+      <line
+         x1="12.5"
+         y1="0.5"
+         x2="16.5"
+         y2="7.4282031"
+         style="stroke:#000000;stroke-width:0.13333333;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="line18" />
+      <line
+         x1="0.5"
+         y1="7.4282031"
+         x2="4.5"
+         y2="14.356406"
+         style="stroke:#000000;stroke-width:0.13333333;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="line20" />
+      <line
+         x1="4.5"
+         y1="14.356406"
+         x2="12.5"
+         y2="14.356406"
+         style="stroke:#000000;stroke-width:0.13333333;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="line22" />
+      <line
+         x1="16.5"
+         y1="7.4282031"
+         x2="12.5"
+         y2="14.356406"
+         style="stroke:#000000;stroke-width:0.13333333;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="line24" />
+    </g>
+    <g
+       id="g868"
+       style="stroke:#000000;stroke-width:0.59300891;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(0.65362329,0,0,0.69609741,-28.267863,3.1575786)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.59300891;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 60.570003,7.1345404 102.11656,46.096602"
+         id="path850" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.59300891;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 102.11656,7.1345404 60.570003,46.096602"
+         id="path852" />
+    </g>
+  </g>
+</svg>
