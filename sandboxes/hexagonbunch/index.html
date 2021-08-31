@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="colours.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hexagons - Flexbox</title>
+</head>
+
+<body>
+    <svg class="defs-clip-svg">
+        <defs>
+            <!-- <clipPath id="clip-hexagon-vertical-square" clipPathUnits="objectBoundingBox">
+                <polygon points="0.5 0, 0.933 0.25, 0.933 0.75, 0.5 1, 0.067 0.75, 0.067 0.25" />
+            </clipPath> -->
+            <clipPath id="clip-hexagon-horizontal-square" clipPathUnits="objectBoundingBox">
+                <polygon points="0 0.5, 0.25 0.066667, 0.75 0.066667, 1.0 0.5, 0.75 0.933333, 0.25 0.933333" />
+            </clipPath>
+            <!-- <clipPath id="clip-hexagon-vertical-preshaped" clipPathUnits="objectBoundingBox">
+                <polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
+            </clipPath> -->
+            <clipPath id="clip-hexagon-horizontal-preshaped" clipPathUnits="objectBoundingBox">
+                <polygon points="0 0.5, 0.25 0, 0.75 0, 1.0 0.5, 0.75 1, 0.25 1" />
+            </clipPath>
+        </defs>
+    </svg>
+    <main>
+        <!-- <div>
+                <div class="hexagon hexagon-horizontal" id="hex1"></div>
+                <div class="hexagon hexagon-vertical" id="hex2"></div>
+            </div> -->
+        <div class="hexagon-bunch">
+            <div class="hexagon-column hexagon-column-root hexagon-column-right">
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col1 row1"></div>
+                </div>
+                <div class="hexagon-column hexagon-column-right">
+                    <div class="hexagon-container">
+                        <div class="hexagon hexagon-horizontal col1 row3"></div>
+                    </div>
+                    <div class="hexagon-column hexagon-column-right">
+                        <div class="hexagon-container">
+                            <div class="hexagon hexagon-horizontal col1 row5"></div>
+                        </div>
+                        <div class="hexagon-column hexagon-column-right">
+                            <div class="hexagon-container">
+                                <div class="hexagon hexagon-horizontal col1 row7"></div>
+                            </div>
+                            <div class="hexagon-column hexagon-column-right">
+                                <div class="hexagon-container">
+                                    <div class="hexagon hexagon-horizontal col1 row9"></div>
+                                </div>
+                                <div class="hexagon-column hexagon-column-right">
+                                    <div class="hexagon-container">
+                                        <div class="hexagon hexagon-horizontal col1 row11"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hexagon-column hexagon-column-root hexagon-column-left">
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col2 row2"></div>
+                </div>
+                <div class="hexagon-column hexagon-column-left">
+                    <div class="hexagon-container">
+                        <div class="hexagon hexagon-horizontal col2 row4"></div>
+                    </div>
+                    <div class="hexagon-column hexagon-column-left">
+                        <div class="hexagon-container">
+                            <div class="hexagon hexagon-horizontal col2 row6"></div>
+                        </div>
+                        <div class="hexagon-column hexagon-column-left">
+                            <div class="hexagon-container">
+                                <div class="hexagon hexagon-horizontal col2 row8"></div>
+                            </div>
+                            <div class="hexagon-column hexagon-column-left">
+                                <div class="hexagon-container">
+                                    <div class="hexagon hexagon-horizontal col2 row10"></div>
+                                </div>
+                                <div class="hexagon-column hexagon-column-left">
+                                    <div class="hexagon-container">
+                                        <div class="hexagon hexagon-horizontal col2 row12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="hexagon-column">
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col3 row1"></div>
+                </div>
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col3 row3"></div>
+                </div>
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col3 row5"></div>
+                </div>
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col3 row7"></div>
+                </div>
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col3 row9"></div>
+                </div>
+                <div class="hexagon-container">
+                    <div class="hexagon hexagon-horizontal col3 row11"></div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+</body>
+
+</html>
