@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --master-scale: 1;
+    --hexagon-width: calc(200px * var(--master-scale));
+    --hexagon-gap: calc(5px * var(--master-scale));
+    --maths-root3on2: 0.866025404;
+    --hexagon-height: calc(var(--hexagon-width) * var(--maths-root3on2));
+}
+
+html {
+    height: 100%;
+    background-color: black;
+    background-image: linear-gradient(to right, transparent 0%, black 33.3333%, black 66.6666%, transparent 100%), url(images/hextile0.5.svg);
+}
+
+body {
+    margin: 0 auto;
+    width: max-content;
+}
+
+main {
+    width: max-content;
+}
+
+
+/* required to hide the svg definitions and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
+
+.defs-clip-svg {
+    position: absolute;
+    z-index: -1;
+}
+
+.hexagon-horizontal {
+    clip-path: url("#clip-hexagon-horizontal-preshaped");
+}
+
+.hexagon-vertical {
+    clip-path: url("#clip-hexagon-vertical-preshaped");
+}
+
+.hexagon-bunch {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.hexagon-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--hexagon-gap);
+    width: calc((var(--hexagon-width) * 0.75) + (var(--hexagon-gap) * var(--maths-root3on2)));
+    position: relative;
+    counter-reset: row;
+    counter-set: row -1;
+    align-items: flex-end;
+}
+
+.hexagon-column-root:nth-child(odd) {
+    top: calc(0.5 * (var(--hexagon-height) + var(--hexagon-gap)));
+}
+
+
+/* .hexagon-column:nth-child(even) {
+    top: calc((var(--hexagon-height) + var(--hexagon-gap)) / 2);
+    counter-set: row 0;
+} */
+
+.hexagon-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: calc(var(--hexagon-height));
+    width: var(--hexagon-width);
+}
+
+.hexagon {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--blue-2);
+    /* content: counter(row); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    counter-increment: row 2;
+    /* transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease; */
+}
+
+
+/* .hexagon:before {
+    content: "Row " counter(row);
+    display: block
+} */
+
+.hexagon-container.col1.row1 {
+    --scale: 0.25;
+    height: calc(var(--scale)*var(--hexagon-height));
+}
+
+.hexagon.col1.row1 {
+    height: calc(var(--scale)*var(--hexagon-height));
+    width: calc(var(--scale)*var(--hexagon-width));
+    left: calc(0.75 * (1 - var(--scale)) * var(--hexagon-width));
+    background-color: var(--green-2);
+}
+
+.hexagon-column.col1.row1 {
+    top: calc(0.25*var(--hexagon-height) - 0.5*var(--hexagon-gap));
+}
+
+.hexagon-column.col1.row2 {
+    display: none;
+}
+
+.hexagon-container.col3.row1 {
+    --scale-above: 0.75;
+    --scale: calc((1 + var(--scale-above)) / 2);
+    height: calc(var(--scale)*var(--hexagon-height));
+}
+
+.hexagon.col3.row1 {
+    --scale: 0.5;
+    height: calc(var(--scale)*var(--hexagon-height));
+    width: calc(var(--scale)*var(--hexagon-width));
+    top: calc(0.5*var(--scale)*var(--hexagon-height));
+    background-color: var(--pink-2);
+}
+
+.hexagon-container.col2.row2 {
+    --scale: 0.75;
+    height: calc(var(--scale)*var(--hexagon-height));
+}
+
+.hexagon.col2.row2 {
+    height: calc(var(--scale)*var(--hexagon-height));
+    width: calc(var(--scale)*var(--hexagon-width));
+    left: calc(0.75 * (1 - var(--scale)) * var(--hexagon-width));
+    background-color: var(--purple-2);
+}
+
+.hexagon-container.col2.row3 {
+    --scale: 0.375;
+    height: calc(var(--scale) * var(--hexagon-height));
+}
+
+.hexagon.col2.row3 {
+    --scale-above: 0.75;
+    /* --scale: 0.375; */
+    height: calc(var(--scale) * var(--hexagon-height));
+    width: calc(var(--scale) * var(--hexagon-width));
+    left: calc((0.75 * (1 - var(--scale-above)) + 0.25 * (1 - (var(--scale) / var(--scale-above))) * var(--scale-above)) * var(--hexagon-width));
+    background-color: var(--aqua-2);
+}
+
+.hexagon.col3.row2 {
+    --scale: 0.25;
+    --scale-above-above: 0.75;
+    --scale-above: 0.375;
+    height: calc(var(--scale) * var(--hexagon-height));
+    width: calc(var(--scale) * var(--hexagon-width));
+    top: calc((0.5*var(--scale-above-above) + (var(--scale)/var(--scale-above)) * var(--scale-above)) * var(--hexagon-height) + var(--hexagon-gap));
+    left: calc( -0.5 * (var(--scale-above)) * var(--hexagon-width));
+}
+
+.hexagon-column.col3.row3 {
+    display: none;
+}

@@ -18,6 +18,8 @@ html {
     padding: 0;
     border-style: none;
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, transparent 0%, black 33.3333%, black 66.6666%, transparent 100%), url(../04-hextilebackground/images/hextile0.5.svg);
+    background-color: black;
     /* font-size: 80%; */
 }
 
@@ -68,12 +70,13 @@ header {
     position: absolute;
     left: 1rem;
     top: 1rem;
-    background-color: var(--teal-2-50);
+    background-color: var(--aqua-2);
 }
 
 #close-button-container {
+    /* this one is relative because it's parent (the nav) is absolute */
     position: relative;
-    background-color: var(--purple-2-50);
+    background-color: var(--purple-2);
 }
 
 
@@ -193,12 +196,12 @@ header {
 
 #hamburger:hover::before,
 #hamburger:active::before {
-    background-color: var(--teal-2-50);
+    background-color: var(--aqua-2);
 }
 
 #close-button:hover::before,
 #close-button:active::before {
-    background-color: var(--purple-2-50);
+    background-color: var(--purple-2);
 }
 
 nav {
