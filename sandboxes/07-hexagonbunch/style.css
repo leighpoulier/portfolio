@@ -43,13 +43,13 @@ main {
     clip-path: url("#clip-hexagon-vertical-preshaped");
 }
 
-.hexagon-bunch {
+#hexagon-bunch-1 {
     display: flex;
     flex-direction: row;
     position: relative;
 }
 
-.hexagon-column {
+#hexagon-bunch-1 .hexagon-column {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ main {
     align-items: flex-end;
 }
 
-.hexagon-column-root:nth-child(odd) {
+#hexagon-bunch-1 .hexagon-column-root:nth-child(odd) {
     top: calc(0.5 * (var(--hexagon-height) + var(--hexagon-gap)));
 }
 
@@ -71,7 +71,7 @@ main {
     counter-set: row 0;
 } */
 
-.hexagon-container {
+#hexagon-bunch-1 .hexagon-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ main {
     width: var(--hexagon-width);
 }
 
-.hexagon {
+#hexagon-bunch-1 .hexagon {
     position: relative;
     height: 100%;
     width: 100%;
@@ -102,33 +102,33 @@ main {
     display: block
 } */
 
-.hexagon-container.col1.row1 {
+#hexagon-bunch-1 .hexagon-container.col1.row1 {
     --scale: 0.25;
     height: calc(var(--scale)*var(--hexagon-height));
 }
 
-.hexagon.col1.row1 {
+#hexagon-bunch-1 .hexagon.col1.row1 {
     height: calc(var(--scale)*var(--hexagon-height));
     width: calc(var(--scale)*var(--hexagon-width));
     left: calc(0.75 * (1 - var(--scale)) * var(--hexagon-width));
     background-color: var(--green-2);
 }
 
-.hexagon-column.col1.row1 {
+#hexagon-bunch-1 .hexagon-column.col1.row1 {
     top: calc(0.25*var(--hexagon-height) - 0.5*var(--hexagon-gap));
 }
 
-.hexagon-column.col1.row2 {
+#hexagon-bunch-1 .hexagon-column.col1.row2 {
     display: none;
 }
 
-.hexagon-container.col3.row1 {
+#hexagon-bunch-1 .hexagon-container.col3.row1 {
     --scale-above: 0.75;
     --scale: calc((1 + var(--scale-above)) / 2);
     height: calc(var(--scale)*var(--hexagon-height));
 }
 
-.hexagon.col3.row1 {
+#hexagon-bunch-1 .hexagon.col3.row1 {
     --scale: 0.5;
     height: calc(var(--scale)*var(--hexagon-height));
     width: calc(var(--scale)*var(--hexagon-width));
@@ -136,24 +136,24 @@ main {
     background-color: var(--pink-2);
 }
 
-.hexagon-container.col2.row2 {
+#hexagon-bunch-1 .hexagon-container.col2.row2 {
     --scale: 0.75;
     height: calc(var(--scale)*var(--hexagon-height));
 }
 
-.hexagon.col2.row2 {
+#hexagon-bunch-1 .hexagon.col2.row2 {
     height: calc(var(--scale)*var(--hexagon-height));
     width: calc(var(--scale)*var(--hexagon-width));
     left: calc(0.75 * (1 - var(--scale)) * var(--hexagon-width));
     background-color: var(--purple-2);
 }
 
-.hexagon-container.col2.row3 {
+#hexagon-bunch-1 .hexagon-container.col2.row3 {
     --scale: 0.375;
     height: calc(var(--scale) * var(--hexagon-height));
 }
 
-.hexagon.col2.row3 {
+#hexagon-bunch-1 .hexagon.col2.row3 {
     --scale-above: 0.75;
     /* --scale: 0.375; */
     height: calc(var(--scale) * var(--hexagon-height));
@@ -162,7 +162,7 @@ main {
     background-color: var(--aqua-2);
 }
 
-.hexagon.col3.row2 {
+#hexagon-bunch-1 .hexagon.col3.row2 {
     --scale: 0.25;
     --scale-above-above: 0.75;
     --scale-above: 0.375;
@@ -172,6 +172,6 @@ main {
     left: calc( -0.5 * (var(--scale-above)) * var(--hexagon-width));
 }
 
-.hexagon-column.col3.row3 {
+#hexagon-bunch-1 .hexagon-column.col3.row3 {
     display: none;
 }
