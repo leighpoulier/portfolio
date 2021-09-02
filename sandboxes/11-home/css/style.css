@@ -7,25 +7,33 @@
 :root {
     --master-scale: 1;
     --maths-root3on2: 0.866025404;
-    --base-hex-width: 240px;
-    --base-hex-gap: 5px;
+    --master-hex-width: 240px;
+    --master-hex-gap: 5px;
+    --master-hex-border: 0.5rem;
+    --master-hex-nav-width: 8rem;
+    --master-hex-nav-gap: 1rem;
+    --master-hex-nav-border: 0.25rem;
     --scale: 1;
     /* Full size hex constants */
-    --hex-width: calc(var(--base-hex-width) * var(--master-scale) * var(--scale));
+    --hex-width: calc(var(--master-hex-width) * var(--master-scale) * var(--scale));
     --hex-height: calc(var(--hex-width) * var(--maths-root3on2) * var(--scale));
-    --hex-gap: calc(var(--base-hex-gap) * var(--master-scale));
+    --hex-gap: calc(var(--master-hex-gap) * var(--master-scale));
     --hex-gap-half-vertical: calc(var(--hex-gap) * 0.5);
     --hex-gap-horizontal: calc(var(--hex-gap) * var(--maths-root3on2));
     /* Full size hex border constants */
-    --hex-border: calc(3px * var(--master-scale));
+    --hex-border: calc(var(--master-hex-border) * var(--master-scale));
     --hex-border-x: var(--hex-border);
     --hex-border-y: calc(var(--hex-border)*var(--maths-root3on2));
     /* Hex Nav constants */
-    --hex-nav-width: calc(8rem * var(--master-scale));
+    --hex-nav-width: calc(var(--master-hex-nav-width) * var(--master-scale));
     --hex-nav-height: calc(var(--hex-nav-width) * var(--maths-root3on2));
-    --hex-nav-gap: calc(1rem * var(--master-scale));
+    --hex-nav-gap: calc(var(--master-hex-nav-gap) * var(--master-scale));
     --hex-nav-gap-half-vertical: calc(var(--hex-nav-gap) * 0.5);
     --hex-nav-gap-horizontal: calc(var(--hex-nav-gap) * var(--maths-root3on2));
+    /* Hex Nav border constants */
+    --hex-nav-border: calc(var(--master-hex-nav-border) * var(--master-scale));
+    --hex-nav-border-x: var(--hex-nav-border);
+    --hex-nav-border-y: calc(var(--hex-nav-border)*var(--maths-root3on2));
     /* Hex alignment starting points */
     --hex-align-left-edge: calc(-1/8 * var(--hex-width) + 0.5 * var(--hex-gap-horizontal));
     --hex-align-middle: calc( -1/2 * * var(--hex-width));
@@ -80,27 +88,59 @@ p {
 }
 
 .bg-blue {
-    background-color: --var(--blue-2);
+    background-color: var(--blue-2);
 }
 
 .bg-purple {
-    background-color: --var(--purple-2);
+    background-color: var(--purple-2);
 }
 
 .bg-green {
-    background-color: --var(--green-2);
+    background-color: var(--green-2);
 }
 
 .bg-pink {
-    background-color: --var(--pink-2);
+    background-color: var(--pink-2);
 }
 
 .bg-aqua {
-    background-color: --var(--aqua-2);
+    background-color: var(--aqua-2);
 }
 
 .bg-yellow {
-    background-color: --var(--yellow-2);
+    background-color: var(--yellow-2);
+}
+
+.bg-black {
+    background-color: black;
+}
+
+svg.fill-blue path {
+    fill: var(--blue-2);
+}
+
+svg.fill-purple path {
+    fill: var(--purple-2);
+}
+
+svg.fill-green path {
+    fill: var(--green-2);
+}
+
+svg.fill-pink path {
+    fill: var(--pink-2);
+}
+
+svg.fill-aqua path {
+    fill: var(--aqua-2);
+}
+
+svg.fill-yellow path {
+    fill: var(--yellow-2);
+}
+
+svg.fill-black path {
+    fill: black;
 }
 
 
@@ -149,6 +189,7 @@ header {
     left: 1rem;
     top: 1rem;
     background-color: var(--aqua-2);
+    z-index: 5;
 }
 
 #close-button-container {
@@ -289,7 +330,7 @@ header {
     left: 0rem;
     height: 100%;
     width: 100%;
-    z-index: 5;
+    z-index: 10;
     /* top: -9999px; */
     /* opacity: 100; */
     transition-property: opacity;
@@ -390,17 +431,18 @@ nav a:hover {
         flex-direction: row;
         gap: -2rem;
         padding: 0;
+        height: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical));
     }
     nav li {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: var(--hex-height-nav);
-        width: calc(0.75*var(--hex-width-nav) + var(--hex-gap-nav-horizontal));
+        height: var(--hex-nav-height);
+        width: calc(0.75*var(--hex-nav-width) + var(--hex-nav-gap-horizontal));
     }
     nav li:nth-child(even) {
-        top: calc(0.5*(var(--hex-height-nav) + var(--hex-gap-nav)));
+        top: calc(0.5*(var(--hex-nav-height) + var(--hex-nav-gap)));
     }
     nav a {
         background-color: var(--blue-2);
@@ -436,10 +478,10 @@ nav a:hover {
     }
     nav a .nav-link-inner {
         position: absolute;
-        top: calc(3px * var(--maths-root3on2));
-        right: 3px;
-        bottom: calc(3px * var(--maths-root3on2));
-        left: 3px;
+        top: var(--hex-nav-border-x);
+        right: var(--hex-nav-border-y);
+        bottom: var(--hex-nav-border-x);
+        left: var(--hex-nav-border-y);
         background-color: black;
         clip-path: url(#clip-hex-horizontal-preshaped);
         display: flex;
@@ -495,18 +537,190 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    /* padding based on 5rem for hamburger, + 1rem top and bottom extra padding */
+    padding: 7rem 1rem 1rem;
     flex-grow: 1;
     position: relative;
-    /* top based on 5rem for hamburger, + 1rem bottom padding (1rem top padding already within main */
-    top: 6rem;
 }
 
 @media screen and (min-width: 550px) {
     main {
-        top: calc(1.5 * var(--hex-height-nav) + var(--hex-gap-nav-half-vertical) + 2rem);
+        /* top: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical) + 2rem); */
+        padding: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical) + 2rem) 1rem 1rem;
     }
 }
 
 
 /* END GENERIC MAIN */
+
+
+/* BEGIN GENERIC HEX */
+
+.hex,
+.hex-inner,
+.hex-link {
+    clip-path: url("#clip-hex-horizontal-preshaped");
+}
+
+.hex-container {
+    --scale: 1;
+    height: calc(var(--scale) * var(--hex-height));
+    width: calc(var(--scale) * var(--hex-width));
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.hex {
+    --scale: 1;
+    /* height: calc(var(--scale) * var(--hex-height)); */
+    /* width: calc(var(--scale) * var(--hex-width)); */
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+}
+
+.hex-link:hover svg path {
+    fill: black;
+}
+
+.hex-link:hover .bg-blue .hex-inner {
+    background-color: var(--blue-2);
+}
+
+.hex-link:hover .bg-green .hex-inner {
+    background-color: var(--green-2);
+}
+
+.hex-link:hover .bg-pink .hex-inner {
+    background-color: var(--pink-2);
+}
+
+.hex-link:hover .bg-purple .hex-inner {
+    background-color: var(--purple-2);
+}
+
+.hex-link:hover .bg-aqua .hex-inner {
+    background-color: var(--aqua-2);
+}
+
+.hex-link:hover .bg-yellow .hex-inner {
+    background-color: var(--yellow-2);
+}
+
+.hex-inner {
+    position: absolute;
+    top: var(--hex-border-y);
+    bottom: var(--hex-border-y);
+    left: var(--hex-border-x);
+    right: var(--hex-border-x);
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.hex svg {
+    scale: 100%;
+    max-width: 100%;
+}
+
+.hex svg path {
+    transition-property: fill;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.hex img {
+    height: 100%;
+    width: 100%;
+}
+
+.hex-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* END GENERIC HEX */
+
+
+/* BEGIN SPECIFIC HOME STYLES */
+
+#title-hex-container {
+    position: relative;
+    /* width: max-content; */
+    height: 600px;
+    border: 1px white solid;
+}
+
+#hex1 {
+    left: var(--hex-align-right-edge);
+    visibility: hidden;
+}
+
+#hex2 {
+    top: var(--hex-move-SE-y);
+    left: var(--hex-align-left-edge);
+}
+
+#hex3 {
+    left: var(--hex-align-right-edge);
+    top: var(--hex-move-S-y);
+}
+
+#hex4 {
+    top: calc(var(--hex-move-S-y) + var(--hex-move-SE-y));
+    left: var(--hex-align-left-edge);
+}
+
+#hex5 {
+    top: calc(2 * var(--hex-move-S-y));
+    left: var(--hex-align-right-edge);
+}
+
+#hex5 svg {
+    scale: 90%;
+}
+
+#hex6 {
+    left: calc(var(--hex-align-left-edge) + var(--hex-move-SE-x));
+    top: var(--hex-move-S-y);
+    justify-content: center;
+}
+
+#hex6>.hex {
+    height: 50%;
+    width: 50%;
+}
+
+#hex7 {
+    left: calc(var(--hex-align-right-edge) + var(--hex-move-SW-x));
+    top: calc(var(--hex-move-S-y) + var(--hex-move-SW-y));
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#hex7>.hex {
+    height: 16.6666%;
+    width: 16.6666%;
+}
+
+#hex8 {
+    left: calc(var(--hex-align-left-edge) + 0.5 * var(--hex-width));
+    top: var(--hex-move-NE-y);
+    justify-content: flex-end;
+}
+
+#hex8>.hex {
+    height: 33.3333%;
+    width: 33.3333%;
+}
+
+
+/* END SPECIFIC HOME STYLES */

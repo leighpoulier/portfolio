@@ -1,0 +1,44 @@
+:root {
+    /* Palette URL: http://paletton.com/#uid=63L0X0kUYWKoWUEwkW9W4y1Urpn */
+    --blue-0: #487AEE;
+    --blue-1: #195BF2;
+    --blue-2: #054DF4;
+    --blue-3: #0337B0;
+    --blue-4: #032B87;
+    --purple-0: #B03FEE;
+    --purple-1: #A10DF2;
+    --purple-2: #9E02F4;
+    --purple-3: #7201B0;
+    --purple-4: #580187;
+    --green-0: #36F536;
+    --green-1: #00F700;
+    --green-2: #00F800;
+    --green-3: #00CF00;
+    --green-4: #00A200;
+    --orange-0: #FFBD38;
+    --orange-1: #FFAA00;
+    --orange-2: #FFAA00;
+    --orange-3: #FFAA00;
+    --orange-4: #CA8700;
+    /* Palette URL: http://paletton.com/#uid=64e0X0kQ9UwnXT2uTU4TNxISlpe */
+    --violet-0: #744FEB;
+    --violet-1: #5323EE;
+    --violet-2: #4009EF;
+    --violet-3: #2E05B4;
+    --violet-4: #24048A;
+    --pink-0: #F23DA4;
+    --pink-1: #F4098E;
+    --pink-2: #F5008A;
+    --pink-3: #CF0075;
+    --pink-4: #A1005B;
+    --aqua-0: #3AE6E6;
+    --aqua-1: #08E9E9;
+    --aqua-2: #00EAEA;
+    --aqua-3: #009E9E;
+    --aqua-4: #007979;
+    --yellow-0: #FFDE40;
+    --yellow-1: #FFD509;
+    --yellow-2: #FFD300;
+    --yellow-3: #FFD300;
+    --yellow-4: #C9A700;
+}
