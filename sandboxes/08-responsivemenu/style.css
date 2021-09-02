@@ -26,7 +26,9 @@ html {
 body {
     position: relative;
     height: 100%;
-    padding: 1rem;
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -36,6 +38,10 @@ body {
     position: absolute;
     z-index: -999;
     /* visibility: hidden; */
+}
+
+p {
+    color: white;
 }
 
 header {
@@ -215,7 +221,7 @@ header {
     position: absolute;
     /* top: 0rem; */
     left: 0rem;
-    background-color: black;
+    /* background-color: black; */
     height: 100%;
     width: 100%;
     z-index: 5;
@@ -233,7 +239,8 @@ header {
     position: relative;
     padding: 1rem;
     z-index: 6;
-    filter: box-shadow(0px 10px 4px var(--blue-0));
+    background-color: black;
+    box-shadow: 0 0 20px 20px black;
 }
 
 #nav-container.nav-transparent {
@@ -261,7 +268,7 @@ nav ul {
     flex-direction: column;
     /* justify-content: space-around; */
     list-style: none;
-    padding: 1rem 0;
+    padding: 1rem 0 0;
 }
 
 
@@ -291,6 +298,7 @@ nav a:active {
 #nav-menu-modal-overlay {
     position: relative;
     flex: auto;
+    background-color: #0000007F;
 }
 
 @media screen and (min-width: 500px) {
@@ -349,4 +357,12 @@ nav a:active {
     #nav-container {
         justify-content: flex-end;
     }
+}
+
+main {
+    padding: 1rem;
+}
+
+.testing {
+    position: relative;
 }
