@@ -563,26 +563,40 @@ nav a:hover {
 /* BEGIN GENERIC MAIN */
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     /* padding based on 5rem for hamburger, + 1rem top and bottom extra padding */
     padding: 3rem 1rem 1rem;
     flex-grow: 1;
     position: relative;
-    /* overflow-x: hidden; */
-    width: 100%;
     max-width: 1000px;
+    /* overflow-x: hidden; */
 }
 
 header+main {
     padding: 7rem 1rem 1rem;
 }
 
+main,
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    padding: 4rem 1rem 1rem;
+    /* max-width: 600px; */
+    /* border-top: 0.5px solid var(--pink-2); */
+}
+
+footer p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 @media screen and (min-width: 550px) {
     header+main {
-        /* top: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical) + 2rem); */
-        padding: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical) + 2rem) 1rem 1rem;
+        padding: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical) + 5rem) 1rem 1rem;
     }
     main {
         padding: 8rem 1rem 1rem;
@@ -590,12 +604,17 @@ header+main {
 }
 
 article {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    /* gap: 1rem; */
     width: 100%;
+}
+
+article p {
+    margin: 2rem 0;
+    /* line-height: 1.2rem; */
 }
 
 figure {
@@ -605,8 +624,22 @@ figure {
     align-items: center;
 }
 
-figure.full-width {
-    width: 100%;
+figure.float-left,
+figure.float-right {
+    margin: 1rem auto;
+}
+
+@media screen and (min-width: 550px) {
+    figure.float-left {
+        float: left;
+        margin-right: 2rem;
+        ;
+    }
+    figure.float-right {
+        float: right;
+        margin-left: 2rem;
+        ;
+    }
 }
 
 .img-border-outer.hex,
@@ -618,14 +651,50 @@ a {
     text-decoration: none;
 }
 
-p,
-figcaption {
-    color: #CFCFCF;
+p {
     font-size: 1.2rem;
 }
 
+p,
+figcaption {
+    color: #CFCFCF;
+}
 
-/* figca */
+.alignment-container {
+    display: flex;
+    width: 100%;
+}
+
+.alignment-container.row {
+    flex-direction: row;
+}
+
+.alignment-container.column-row {
+    flex-direction: column;
+}
+
+.alignment-container.half-width:first-child {
+    width: 50%;
+}
+
+.alignment-container.end {
+    justify-content: end;
+}
+
+.alignment-container.center,
+.alignment-container.center-end {
+    justify-content: center;
+}
+
+@media screen and (min-width: 650px) {
+    .alignment-container.column-row {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .alignment-container.center-end {
+        justify-content: flex-end;
+    }
+}
 
 
 /* END GENERIC MAIN */
@@ -640,13 +709,34 @@ figcaption {
     clip-path: url("#clip-hex-horizontal-preshaped");
 }
 
-.hex-container {
+.hex-container.abs,
+.hex-container.rel {
     --scale: 1;
     height: calc(var(--scale) * var(--hex-height));
     width: calc(var(--scale) * var(--hex-width));
-    position: absolute;
     display: flex;
     flex-direction: column;
+}
+
+.hex-container.abs {
+    position: absolute;
+}
+
+.hex-container.rel {
+    position: relative;
+}
+
+
+/* .hex-container.size1-5 {
+    --scale: 1.5;
+} */
+
+.hex-container.crop-width75 {
+    width: calc(0.75 * var(--scale) * var(--hex-width));
+}
+
+.hex-container.crop-width50 {
+    width: calc(0.5 * var(--scale) * var(--hex-width));
 }
 
 .hex {
@@ -693,16 +783,20 @@ figcaption {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
-.full-width .hex-outer {
-    width: 20rem;
-    height: calc(20rem * var(--maths-root3on2));
+.primary .hex-container {
+    /* width: 20rem; */
+    /* height: calc(20rem * var(--maths-root3on2)); */
+    --scale: 1.5;
 }
 
-.less-width .hex-outer {
-    width: 14rem;
-    height: calc(14rem * var(--maths-root3on2));
+.secondary .hex-container {
+    /* width: 14rem; */
+    /* height: calc(14rem * var(--maths-root3on2)); */
+    --scale: 1.0;
 }
 
 .hex-inner {
@@ -737,7 +831,7 @@ figcaption {
     transition-timing-function: ease;
 }
 
-.hex img {
+.hex-inner img {
     height: 100%;
     width: 100%;
 }
@@ -747,6 +841,8 @@ figcaption {
     height: 100%;
     width: 100%;
 }
+
+.main-image-cluster {}
 
 
 /* END GENERIC HEX */
