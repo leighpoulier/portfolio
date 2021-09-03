@@ -149,6 +149,10 @@ body {
     background-color: black;
 }
 
+.bg-auto {
+    background-color: var(--page-theme-foreground);
+}
+
 svg.fill-blue path {
     fill: var(--blue-2);
 }
@@ -177,6 +181,10 @@ svg.fill-black path {
     fill: black;
 }
 
+svg.fill-auto path {
+    fill: var(--page-theme-foreground);
+}
+
 svg.stroke-blue path {
     stroke: var(--blue-2);
 }
@@ -203,6 +211,10 @@ svg.stroke-yellow path {
 
 svg.stroke-black path {
     stroke: black;
+}
+
+svg.stroke-auto path {
+    stroke: var(--page-theme-foreground);
 }
 
 #home-title-container {
@@ -731,7 +743,7 @@ figure {
 }
 figure.float-left,
 figure.float-right {
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 @media screen and (min-width: 550px) {
     figure.float-left {
@@ -795,11 +807,9 @@ p {
     color: #CFCFCF;
 }
 figcaption {
-    /* font-style: italic; */
-    
     font-weight: bold;
     font-size: 1.2rem;
-    font-family: 'EB Garamond', serif;
+    padding: 0.5rem;
 }
 p.indent,
 ul.indent {
@@ -900,6 +910,9 @@ article>section {
 }
 .hex-link:hover .bg-yellow .hex-inner {
     background-color: var(--yellow-2);
+}
+.hex-link:hover .bg-auto .hex-inner {
+    background-color: var(--page-theme-foreground);
 }
 .hex-container.grow {
     transition-property: transform, z-index;
