@@ -4,6 +4,9 @@
     padding: 0;
 }
 
+
+/* Constants and calculations for positioning and scaling of various sizes of hexagons */
+
  :root {
     --master-scale: 1;
     --maths-root3on2: 0.866025404;
@@ -105,7 +108,6 @@
 html {
     height: 100%;
     background-color: black;
-    /* background-image: linear-gradient(to right, transparent 0%, black 33.3333%, black 66.6666%, transparent 100%), url(../images/hextile0.5.svg); */
     background-image: linear-gradient(to right, transparent 0%, black 50%, transparent 100%), url(../images/hextile0.5.svg);
     background-attachment: fixed;
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -121,6 +123,9 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* General foreground colours */
 
 .fg-blue {
     color: var(--blue-2);
@@ -153,6 +158,9 @@ body {
 .fg-transparent {
     color: transparent;
 }
+
+
+/* General Background Colours */
 
 .bg-blue {
     background-color: var(--blue-2);
@@ -190,6 +198,9 @@ body {
     background-color: var(--article-foreground, var(--page-theme-foreground, grey));
 }
 
+
+/* Background Colours used only for nav bar in tablet/desktop view */
+
 @media screen and (min-width: 550px) {
     .bg-blue-tablet {
         background-color: var(--blue-2);
@@ -219,6 +230,9 @@ body {
         background-color: var(--article-foreground, var(--page-theme-foreground, grey));
     }
 }
+
+
+/* General SVG fill and stroke colours */
 
 svg.fill-blue path {
     fill: var(--blue-2);
@@ -284,6 +298,9 @@ svg.stroke-auto path {
     stroke: var(--page-theme-foreground);
 }
 
+
+/* General rules for makign neon glow effect */
+
 .glow-blue {
     filter: drop-shadow(0px 0px 10px #054DF4);
 }
@@ -336,12 +353,18 @@ svg.stroke-auto path {
     filter: drop-shadow(0px 0px 10px black);
 }
 
+
+/* Container on home page for positioning hexagon arrangement */
+
 #home-title-container {
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: flex-start;
 }
+
+
+/* Container for home page positioning of heading */
 
 #title-img-wrapper {
     position: relative;
@@ -354,8 +377,6 @@ svg.stroke-auto path {
 .overlay {
     position: relative;
     z-index: 1;
-    /* transform: scale(0.8); */
-    /* flex-grow: 1; */
 }
 
 @media screen and (min-width: 550px) {
@@ -371,7 +392,7 @@ svg.stroke-auto path {
 }
 
 
-/* required to hide the svg definitions and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
+/* required to hide the svg definitions of clip paths and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
 
 .defs-clip-svg {
     position: absolute;
@@ -397,11 +418,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-
-/* #hamburger-drop-shadow {
-    filter: drop-shadow(0px 0px 10px black);
-} */
 
 #hamburger-container,
 #close-button-container {
@@ -430,7 +446,7 @@ header {
 }
 
 
-/* overlay to create create false border around container */
+/* overlay to create create false border around container for hexagon border effect */
 
 #hamburger-container:before,
 #close-button-container:before {
@@ -444,6 +460,9 @@ header {
     clip-path: url("#clip-hex-horizontal-square");
     z-index: -2;
 }
+
+
+/* individual bars of hamburger and close button */
 
 .hamburger-bar,
 .close-button-bar {
@@ -486,7 +505,7 @@ header {
 }
 
 
-/* This is the animated background hex behind the hamburger */
+/* This is the animated background hex behind the hamburger bars */
 
 #hamburger::before,
 #close-button::before {
@@ -526,6 +545,9 @@ header {
     clip-path: url("#clip-hex-horizontal-square");
 }
 
+
+/* Make the hamburger and close buttons appear like a link */
+
 #hamburger:hover,
 #close-button:hover {
     cursor: pointer;
@@ -535,24 +557,23 @@ header {
 #close-button:hover::before {
     opacity: 1;
     transform: scale(1);
-    /* filter: hue-rotate(30deg); */
 }
 
-#hamburger:hover::before {
-    background-color: var(--page-theme-foreground);
-}
-
-#hamburger:hover .hamburger-bar {
-    background-color: black;
-}
-
+#hamburger:hover::before,
 #close-button:hover::before {
     background-color: var(--page-theme-foreground);
 }
 
+#hamburger:hover .hamburger-bar,
 #close-button:hover .close-button-bar {
     background-color: black;
 }
+
+
+/* END HAMBURGER */
+
+
+/* BEGIN NAV */
 
 #nav-container {
     position: absolute;
@@ -575,6 +596,9 @@ nav {
     box-shadow: 0px 0px 20px 20px black;
     background-color: black;
 }
+
+
+/* Nav drawer entry and exit for mobile view */
 
 #nav-container.nav-transparent {
     opacity: 0;
@@ -612,6 +636,9 @@ nav a {
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
+
+
+/* Lots of colours for different colours nav menu items */
 
 nav a:hover {
     background: var(--page-theme-foreground);
@@ -663,6 +690,9 @@ nav a span.nav-break::after {
     flex: auto;
     background-color: #0000007F;
 }
+
+
+/* Nav bar behaviour for tablet/desktop */
 
 @media screen and (min-width: 550px) {
     #navbar {
@@ -719,38 +749,15 @@ nav a span.nav-break::after {
         color: var(--blue-2);
         border-radius: unset;
         padding: unset;
-        /* height: calc(8rem * var(--maths-root3on2)); */
-        /* width: 8rem; */
         width: var(--hex-nav-width);
         height: var(--hex-nav-height);
         clip-path: url(#clip-hex-horizontal-preshaped);
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        /* align-items: center; */
         text-align: center;
-        /* font-size: 1.5rem; */
         position: absolute;
         transition-property: transform;
         transition-duration: 0.3s;
         transition-timing-function: ease;
     }
-    /* nav a#nav-link-home {
-        background-color: var(--blue-2);
-        color: var(--blue-2);
-    }
-    nav a#nav-link-aboutme {
-        background-color: var(--pink-2);
-        color: var(--pink-2);
-    }
-    nav a#nav-link-blog {
-        background-color: var(--green-2);
-        color: var(--green-2);
-    }
-    nav a#nav-link-contact {
-        background-color: var(--purple-2);
-        color: var(--purple-2);
-    } */
     nav a .nav-link-inner {
         position: absolute;
         top: var(--hex-nav-border-x);
@@ -788,9 +795,6 @@ nav a span.nav-break::after {
     nav a#nav-link-home:focus {
         background-color: var(--blue-2);
     }
-    /* nav a#nav-link-home:hover {
-        background-color: var(--blue-2);
-    } */
     nav a#nav-link-aboutme:hover .nav-link-inner,
     nav a#nav-link-aboutme:active .nav-link-inner,
     nav a#nav-link-aboutme:focus .nav-link-inner,
@@ -799,9 +803,6 @@ nav a span.nav-break::after {
     nav a#nav-link-aboutme:focus {
         background-color: var(--pink-2);
     }
-    /* nav a#nav-link-aboutme:hover {
-        background-color: var(--pink-2);
-    } */
     nav a#nav-link-blog:hover .nav-link-inner,
     nav a#nav-link-blog:active .nav-link-inner,
     nav a#nav-link-blog:focus .nav-link-inner,
@@ -810,9 +811,6 @@ nav a span.nav-break::after {
     nav a#nav-link-blog:focus {
         background-color: var(--green-2);
     }
-    /* nav a#nav-link-blog:hover {
-        background-color: var(--green-2);
-    } */
     nav a#nav-link-contact:hover .nav-link-inner,
     nav a#nav-link-contact:active .nav-link-inner,
     nav a#nav-link-contact:focus .nav-link-inner,
@@ -821,10 +819,10 @@ nav a span.nav-break::after {
     nav a#nav-link-contact:focus {
         background-color: var(--purple-2);
     }
-    /* nav a#nav-link-contact:hover {
-        background-color: var(--purple-2);
-    } */
 }
+
+
+/* Nav bar placement at upper right in desktop view */
 
 @media screen and (min-width: 1000px) {
     #nav-container {
@@ -851,7 +849,7 @@ main {
     flex-grow: 1;
     position: relative;
     max-width: 1000px;
-    /* overflow-x: hidden; */
+    /* overflow-x: hidden; THIS BREAKS IOS COMPATIBILITY FOR SOME REASON, but it was used to restrict ability to scroll right in mobile view, particularly in index.html when excess content overflows to right*/
 }
 
 header+main {
@@ -869,8 +867,6 @@ footer {
 
 footer {
     padding: 3rem 1rem 1rem;
-    /* max-width: 600px; */
-    /* border-top: 0.5px solid var(--pink-2); */
 }
 
 footer p {
@@ -879,13 +875,18 @@ footer p {
 }
 
 @media screen and (min-width: 550px) {
+    /* move main down if on any page with a header (all except index.html) */
     header+main {
         padding: calc(1.5 * var(--hex-nav-height) + var(--hex-nav-gap-half-vertical) + 5rem) 1rem 1rem;
     }
+    /* main is higher on index.html because sthere is no header section */
     main {
         padding: 4rem 1rem 1rem;
     }
 }
+
+
+/* Paragraphs appearing as direct children of articles or sections (as used on Blog List, Blog Page, About Me etc */
 
 article>p,
 section>p,
@@ -893,6 +894,9 @@ article>ul {
     margin: 2rem 0;
     line-height: 1.4;
 }
+
+
+/* Multicolumn used for ul on about me page */
 
 @media screen and (min-width: 400px) {
     ul.multi-column {
@@ -906,6 +910,9 @@ article>ul {
     }
 }
 
+
+/* Figure component used extensively for captioned images on Blog, About Me pages. */
+
 figure {
     display: flex;
     flex-direction: column;
@@ -915,9 +922,15 @@ figure {
     clear: both;
 }
 
+
+/* No bottom border if last item on page */
+
 figure:last-child {
     margin: 2rem auto 0;
 }
+
+
+/* float left or right in tablet */
 
 @media screen and (min-width: 550px) {
     figure.float-left {
@@ -938,6 +951,9 @@ figure:last-child {
         text-align: justify;
     }
 }
+
+
+/* float left or right in desktop */
 
 @media screen and (min-width: 1000px) {
     figure.float-left-desktop {
@@ -970,6 +986,9 @@ h6 {
     color: var(--article-foreground, var(--page-theme-foreground, grey));
 }
 
+
+/* prevent headings from floating around images */
+
 h1,
 section>h2,
 article>h2,
@@ -989,6 +1008,9 @@ section>h2+h3,
 article>h2+h3 {
     margin-top: 1rem;
 }
+
+
+/* disable browser colouring of links */
 
 a:visited {
     color: var(--page-theme-background);
@@ -1012,6 +1034,9 @@ ul.indent {
 article>section {
     margin: 2rem 0;
 }
+
+
+/* Classes to generically arrange items in flex box based on initial direction and changing direction at different screen widths */
 
 .alignment-container {
     display: flex;
@@ -1074,6 +1099,9 @@ article>section {
 /* END GENERIC MAIN */
 
 
+/* Colouring, positioning, scaling of hexagons */
+
+
 /* BEGIN GENERIC HEX */
 
 .hex,
@@ -1117,6 +1145,9 @@ article>section {
     /* background-color: red; */
     position: absolute;
 }
+
+
+/* Inversion of hexagon colours and colours if child elements to give animation for external links etc */
 
 .hex-link:hover svg path,
 .hex-link:active svg path,
@@ -1166,6 +1197,9 @@ article>section {
     background-color: var(--page-theme-foreground);
 }
 
+
+/* Grow effect for hover/active */
+
 .hex-container.grow .hex-link {
     transition-property: transform;
     transition-duration: 0.3s;
@@ -1210,6 +1244,9 @@ article>section {
     height: var(--hex-secondary-height);
 }
 
+
+/* Grows some hexes on desktop */
+
 @media screen and (min-width: 1000px) {
     .hex-container.primary-desktop {
         width: var(--hex-primary-width);
@@ -1223,13 +1260,9 @@ article>section {
     bottom: var(--hex-border-y);
     left: var(--hex-border-x);
     right: var(--hex-border-x);
-    /* background-color: grey; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transition-property: background-color;
-transition-duration: 0.3s;
-transition-timing-function: ease; */
 }
 
 .hex-container.icon .hex-inner {
@@ -1252,7 +1285,6 @@ transition-timing-function: ease; */
 }
 
 .hex-inner svg {
-    /* scale: 100%; */
     max-width: 90%;
 }
 
@@ -1275,7 +1307,6 @@ transition-timing-function: ease; */
 
 .hex-arrangement-anchor {
     position: relative;
-    /* border: 1px white solid; */
 }
 
 
@@ -1283,6 +1314,9 @@ transition-timing-function: ease; */
 
 
 /* BEGIN SPECIFIC HOME STYLES */
+
+
+/* Arrangement of hexagons in cluster on index.html */
 
 #home-title-hex-container #hex1 {
     left: var(--hex-align-right-edge);
@@ -1346,6 +1380,9 @@ transition-timing-function: ease; */
 #home-title-container {
     top: 1rem;
 }
+
+
+/* rearrangment of hexagons on index.html at tablet and desktop width */
 
 @media screen and (min-width: 550px) {
     #home-title-hex-container #hex2 {
@@ -1423,10 +1460,16 @@ transition-timing-function: ease; */
 
 /* BEGIN SPECIFIC ABOUT ME STYLES */
 
+
+/* square icon overflows hexagon boundary */
+
 #svg-icon-resume {
     height: 70%;
     width: 70%;
 }
+
+
+/* alignment and tweaking of tables */
 
 .grow-shrink {
     flex-grow: 1;
@@ -1448,6 +1491,9 @@ transition-timing-function: ease; */
 
 
 /* BEGIN SPECIFIC CONTACT STYLES */
+
+
+/* Arrangement of hexagons on contact page */
 
 #contact-hex-icons-container {
     top: var(--hex-icon-move-NE-y);
@@ -1524,6 +1570,9 @@ transition-timing-function: ease; */
     width: 55%;
 }
 
+
+/* Rearrangement of hexagons on tablet and desktop pages */
+
 @media screen and (min-width: 550px) {
     #contact-hex-icons-container {
         height: calc(1.5*var(--hex-icon-move-S-y));
@@ -1559,6 +1608,9 @@ transition-timing-function: ease; */
 
 /* BEGIN BLOG SPECIFIC STYLES */
 
+
+/* Dark transparentish card behind each blog post summary */
+
 .blog-post-summary {
     padding: 1rem;
     /* box-shadow: 0 0 20px -10px var(--page-theme-foreground); */
@@ -1579,6 +1631,9 @@ transition-timing-function: ease; */
     gap: 1rem;
 }
 
+
+/* Rearrangement of blog post summary cards at tablet and desktop width. */
+
 @media screen and (min-width: 550px) {
     .blog-post-summary {
         gap: 1rem;
@@ -1598,11 +1653,17 @@ transition-timing-function: ease; */
     }
 }
 
+
+/* Vertical alignment of blog post summary info to align with larger adjacent image hexagon */
+
 @media screen and (min-width: 1000px) {
     .blog-post-summary {
         align-items: center;
     }
 }
+
+
+/* Arrangement of subcomponents of Blog post summary info half */
 
 .blog-post-summary-info,
 .blog-post-summary-info-title,
@@ -1648,6 +1709,9 @@ article.green {
 
 /* BEGIN BLOG POST SPECIFIC STYLES */
 
+
+/* Go Back icon at bottom of every blog post page */
+
 #svg-icon-goback {
     transition-property: transform;
     transition-duration: 0.3s;
@@ -1655,6 +1719,9 @@ article.green {
     height: 70%;
     width: 70%;
 }
+
+
+/* Rotation of go back icon at bottom of page */
 
 .hex-container.grow .hex-link:hover #svg-icon-goback {
     transform: rotate(-45deg);
@@ -1672,6 +1739,9 @@ article.green {
     max-width: 100%;
 }
 
+
+/* List of blog posts on Blog page */
+
 .list-flex {
     display: flex;
     flex-direction: column;
@@ -1687,6 +1757,9 @@ article.green {
 
 
 /* BEGIN EMAIL SPECIFIC STYLES */
+
+
+/* Container to align entire email form */
 
 #email-form-container {
     max-width: 600px;
@@ -1704,6 +1777,9 @@ article.green {
     display: flex;
     gap: 2rem;
 }
+
+
+/* Group label and input together for alignment */
 
 .label-and-input {
     display: flex;
@@ -1734,9 +1810,7 @@ textarea {
 #email-form textarea {
     background-color: transparent;
     padding: 0.5rem;
-    /* border-color: var(--page-theme-background); */
     color: #CFCFCF;
-    /* box-shadow: 0 0 4px 4px var(--page-theme-background); */
     border-width: 1;
     border-color: var(--page-theme-foreground);
 }
@@ -1744,13 +1818,6 @@ textarea {
 #email-form textarea {
     resize: vertical;
 }
-
-
-/* #email-form #submit {
-    appearance: none;
-    background-color: var(--page-theme-foreground);
-    cursor: pointer;
-} */
 
 #email-form input[type=text],
 #email-form textarea {
@@ -1770,12 +1837,6 @@ textarea {
     outline: none;
     box-shadow: 0 0 4px 4px var(--aqua-0);
 }
-
-
-/* #email-form input[type=text]:focus,
-#email-form textarea:focus {
-    color: var(--aqua-0);
-} */
 
 #svg-icon-send {
     width: 55%;
