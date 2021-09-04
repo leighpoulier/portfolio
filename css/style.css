@@ -8,7 +8,7 @@
     --master-scale: 1;
     --maths-root3on2: 0.866025404;
     --master-hex-width: 16rem;
-    --master-hex-gap: 0.25rem;
+    --master-hex-gap: 0.5rem;
     --master-hex-border: 0.5rem;
     --master-hex-nav-width: 8rem;
     --master-hex-nav-gap: 1rem;
@@ -348,7 +348,7 @@ svg.stroke-auto path {
     width: 80%;
     display: flex;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
 }
 
 .overlay {
@@ -823,8 +823,7 @@ nav a span.nav-break::after {
 /* BEGIN GENERIC MAIN */
 
 main {
-    /* padding based on 5rem for hamburger, + 1rem top and bottom extra padding */
-    padding: 10rem 1rem 1rem;
+    padding: 4rem 1rem 1rem;
     flex-grow: 1;
     position: relative;
     max-width: 1000px;
@@ -832,6 +831,7 @@ main {
 }
 
 header+main {
+    /* padding based on 5rem for hamburger, + 1rem top and bottom extra padding */
     padding: 8rem 1rem 1rem;
 }
 
@@ -888,6 +888,7 @@ figure {
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
+    clear: both;
 }
 
 figure:last-child {
@@ -1297,7 +1298,7 @@ transition-timing-function: ease; */
 }
 
 #home-title-container {
-    top: 4rem;
+    top: 1rem;
 }
 
 @media screen and (min-width: 550px) {
@@ -1684,19 +1685,21 @@ textarea {
     padding: 0.5rem;
     /* border-color: var(--page-theme-background); */
     color: #CFCFCF;
-    box-shadow: 0 0 4px 4px var(--page-theme-background);
-    border-width: 0;
+    /* box-shadow: 0 0 4px 4px var(--page-theme-background); */
+    border-width: 1;
+    border-color: var(--page-theme-foreground);
 }
 
 #email-form textarea {
     resize: vertical;
 }
 
-#email-form #submit {
+
+/* #email-form #submit {
     appearance: none;
     background-color: var(--page-theme-foreground);
     cursor: pointer;
-}
+} */
 
 #email-form input[type=text],
 #email-form textarea {
@@ -1708,19 +1711,20 @@ textarea {
 #email-form input[type=text]:focus-visible,
 #email-form textarea:focus-visible {
     outline: none;
-    box-shadow: 0 0 6px 6px var(--purple-0);
+    box-shadow: 0 0 4px 4px var(--aqua-0);
 }
 
 #email-form input[type=text]:focus,
 #email-form textarea:focus {
     outline: none;
-    box-shadow: 0 0 6px 6px var(--purple-0);
+    box-shadow: 0 0 4px 4px var(--aqua-0);
 }
 
-#email-form input[type=text]:focus,
+
+/* #email-form input[type=text]:focus,
 #email-form textarea:focus {
-    color: var(--purple-0);
-}
+    color: var(--aqua-0);
+} */
 
 #svg-icon-send {
     width: 55%;
