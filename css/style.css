@@ -1811,7 +1811,7 @@ textarea {
     background-color: transparent;
     padding: 0.5rem;
     color: #CFCFCF;
-    border-width: 1;
+    border-width: 1px;
     border-color: var(--page-theme-foreground);
 }
 
