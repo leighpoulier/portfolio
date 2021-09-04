@@ -1,6 +1,6 @@
 # Background
 
-For the last 20 years or so, i have been in the aviation industry.
+For the last 20 years or so, I have been in the aviation industry.
 
 I started out as a student at Swinburne University in Melbourne studying a double degree in Aviation and Business.
 
