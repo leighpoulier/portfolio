@@ -20,7 +20,11 @@ Mobile|less than 550 pixels
 Tablet|550 - 999 pixels
 Desktop|1000px and greater
 
-The website was developed in pure HTML and CSS, using VS Code, and tested with Google Chrome and Mozilla Firefox for desktop, iOS and Android.  It engages the user with a vibrantly coloured neon on black theme, using a palette of 6 neon colours on a dark background with glowing effects.  Most graphical components are hexagonal shaped and some are arranged into groups of interlocking hexagons.
+The website was developed in pure HTML and CSS, using VS Code, and tested with Google Chrome and Mozilla Firefox for desktop, iOS and Android.  
+
+### Theme
+
+The website engages the user with a vibrantly coloured neon on black theme, using a palette of 6 neon colours on a dark background with glowing effects.  Most graphical components are hexagonal shaped and some are arranged into groups of interlocking hexagons.
 
 ### Headings
 
@@ -54,7 +58,7 @@ On mobile, the content is arranged in a narrower space, but the hexagon arrangem
 
 Navigation from the home page to the other three pages is accomplished via the prominent hexagonal links forming the main content of the page (see above).
 
-On every other page, a hexagonal hamburger menu (mobile) or nav bar (tablet and desktop) is provided to enable access back to the home page, or to directly to any of the three other main pages (About Me, Blog, or Contact).
+On every other page, a hexagonal hamburger menu (mobile) or nav bar (tablet and desktop) is provided to enable access back to the home page, or directly to any of the three other main pages (About Me, Blog, or Contact).
 
 #### Navigation on Mobile:
 
@@ -91,9 +95,9 @@ The initial blog page provides a list of five blog entries, each depicted on a p
 
 Each panel is a link providing access to the detail of that blog post.  There are five blog posts included, each on a separate page stored in the ./blog directory and named blog-post-#.html where # is a number 1-5.
 
-![Blog post page on Mobile and Tablet](assets/screenshots/blog/blog-post-mobile-tablet.png)
-
 Following the links provided by the panels on the inital blog page will direct the browser to one of these five blog post pages.  On each blog post page, the content is surrounded by article tags, and the text of the blog post is interspersed with images which are inside figure elements.
+
+![Blog post page on Mobile and Tablet](assets/screenshots/blog/blog-post-mobile-tablet.png)
 
 On Desktop, some of these images are floated left or right so the paragraph text floats around them.
 
@@ -105,7 +109,9 @@ The "Contact" page (contact.html) provides different methods for a prospective e
 
 ![Contact page on Mobile and Tablet](assets/screenshots/contact/contact-mobile-tablet.png)
 
-Links are presented in a honeycomb arrangement that adapts from mobile to tablet/desktop, and respond to touch/click/hover in the same manner as the pdf link on the "About Me" page (see above).  All these links except the last icon (email) are external.
+![Contact page on Desktop](assets/screenshots/contact/contact-desktop.png)
+
+Links are presented in a honeycomb arrangement that adapts from mobile to tablet/desktop, and respond to touch/click/hover with inverted colours and growing slightly larger (see above).  All these links except the last icon (email) are external.
 
 ![Email page on Mobile and Tablet](assets/screenshots/contact/email-mobile-tablet.png)
 ![Email page on Desktop](assets/screenshots/contact/email-desktop.png)
