@@ -20,7 +20,7 @@ Mobile|less than 550 pixels
 Tablet|550 - 999 pixels
 Desktop|1000px and greater
 
-The website was developed in pure HTML and CSS, using VS Code, and tested with Google Chrome and Mozilla Firefox for desktop, iOS and Android.  
+The website was developed in pure HTML and CSS, using VS Code, and tested with Google Chrome and Mozilla Firefox for desktop, iOS and Android.  It is deployed on Github Pages.
 
 ### Theme
 
@@ -44,6 +44,8 @@ The website consists of four main pages:
 - Contact
 
 ![Sitemap of Leigh's Professional Portolio Website](assets/sitemap/sitemapv3.png)
+
+## Functionality and Features
 
 ### Home
 
@@ -83,19 +85,21 @@ The "About Me" page (aboutme.html) provides a prospective employer with informat
 
 A link is provided so that a prospective employer may download a pdf version of my resume, however at this stage the pdf is only a placeholder.
 
-### Blog
+### Blog List
 
 The "Blog" page (blog.html) showcases my ability to create a functioning blog style website.  Real abridged entries from my 2016 travel blog are used as content in this demonstration.
 
 ![Blog page on Mobile and Tablet](assets/screenshots/blog/blog-mobile-tablet.png)
 
-The initial blog page provides a list of five blog entries, each depicted on a panel with an image, a heading, date published, and an introductory paragraph. On mobile these panels arrange their content vertically, and on tablet and desktop they change to horizontal.  The list, however, always runs down the page.  Each blog entry panel is depicted in a different colour relating to its target page colour.
+The initial blog page provides a list of five blog entries, each depicted on a panel with an image, a heading, date published, and an introductory paragraph. On mobile these panels arrange their content vertically, and on tablet and desktop they change to horizontal.  The list, however, always runs down the page.  Each blog entry panel is implemented in its own article element, and is depicted in a different colour relating to its target page colour.
 
 ![Blog page on Desktop](assets/screenshots/blog/blog-desktop.png)
 
 Each panel is a link providing access to the detail of that blog post.  There are five blog posts included, each on a separate page stored in the ./blog directory and named blog-post-#.html where # is a number 1-5.
 
-Following the links provided by the panels on the inital blog page will direct the browser to one of these five blog post pages.  On each blog post page, the content is surrounded by article tags, and the text of the blog post is interspersed with images which are inside figure elements.
+### Blog Entry
+
+Following the links provided by the panels on the inital blog page will direct the browser to one of these five blog post pages.  On each blog post page, the entire blog post is implemented as one big article, and the text of the blog post is interspersed with images which are inside figure elements.
 
 ![Blog post page on Mobile and Tablet](assets/screenshots/blog/blog-post-mobile-tablet.png)
 
@@ -103,7 +107,9 @@ On Desktop, some of these images are floated left or right so the paragraph text
 
 ![Blog post page on Desktop](assets/screenshots/blog/blog-post-desktop.png)
 
-## Contact
+At the bottom of each blog post the hexagon icon link is reused to provide a quick way to go back to the Blog List Page.
+
+### Contact
 
 The "Contact" page (contact.html) provides different methods for a prospective employer to get more information about my work, by providing external links to my online profiles on various social media and collaboration websites.
 
@@ -112,6 +118,8 @@ The "Contact" page (contact.html) provides different methods for a prospective e
 ![Contact page on Desktop](assets/screenshots/contact/contact-desktop.png)
 
 Links are presented in a honeycomb arrangement that adapts from mobile to tablet/desktop, and respond to touch/click/hover with inverted colours and growing slightly larger (see above).  All these links except the last icon (email) are external.
+
+###Email
 
 ![Email page on Mobile and Tablet](assets/screenshots/contact/email-mobile-tablet.png)
 ![Email page on Desktop](assets/screenshots/contact/email-desktop.png)
