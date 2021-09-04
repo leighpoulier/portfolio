@@ -119,7 +119,7 @@ The "Contact" page (contact.html) provides different methods for a prospective e
 
 Links are presented in a honeycomb arrangement that adapts from mobile to tablet/desktop, and respond to touch/click/hover with inverted colours and growing slightly larger (see above).  All these links except the last icon (email) are external.
 
-###Email
+### Email
 
 ![Email page on Mobile and Tablet](assets/screenshots/contact/email-mobile-tablet.png)
 ![Email page on Desktop](assets/screenshots/contact/email-desktop.png)
