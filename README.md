@@ -5,12 +5,33 @@ Leigh Poulier, September 2021
 Published site: [https://leighpoulier.github.io](https://leighpoulier.github.io)  
 Github Repo: [https://github.com/leighpoulier/portfolio](https://github.com/leighpoulier/portfolio)
 
-## Purpose
+## Contents
+
+1. [Purpose](#purpose)
+2. [Description](#description)
+    1. [Theme](#theme)
+    2. [Headings](#headings)
+    3. [Links](#links)
+3. [Sitemap](#sitemap)
+3. [Walkthrough](#walkthrough)
+    1. [Home](#home)
+    2. [Navigation](#navigation)
+    3. [About Me](#aboutme)
+    4. [Blog List](#bloglist)
+    5. [Blog Post](#post)
+    6. [Contact](#contact)
+    7. [Email](#email)
+4. [Components](#components)
+    1. [Text Components](#textcomponents)
+    2. [Graphical Components](#graphicalcomponents)
+5. [Subresource Integrity](#sri)
+6. [Accessibility](#accessibility)
+## Purpose{#purpose}
 
 This website is designed to showcase my abilities in HTML and CSS to a prospective employer.  It includes professional and educational history, personal information and contact links to various online presences.  There is also a blog section, which is designed to showcase techniques in HTML and CSS to build a functional blog type site.
 
 
-## Description
+## Description{#description}
 
 The site is designed for three main form factors: mobile, tablet, and desktop.  Each page of the site is responsive to changes in screen width between the three forms as follows:
 
@@ -22,19 +43,19 @@ Desktop|1000px and greater
 
 The website was developed in pure HTML and CSS, using VS Code, and tested with Google Chrome and Mozilla Firefox for desktop, iOS and Android.  It is deployed on Github Pages.
 
-### Theme
+### Theme{#theme}
 
 The website engages the user with a vibrantly coloured neon on black theme, using a palette of 6 neon colours on a dark background with glowing effects.  Most graphical components are hexagonal shaped and some are arranged into groups of interlocking hexagons.
 
-### Headings
+### Headings{#headings}
 
 Many of the high level headings are implemented using vector graphics of my own handwriting, which in most cases are included inline with the HTML so they can be dynamically coloured.
 
-### Links
+### Links{#links}
 
 Except when inline to a paragraph, most links are implemented as hexagonal icon images.  These links indicate their interactivity by reacting to click/touch with inversion of their colours.  On desktop when hovered or active they will also grow slightly.
 
-## Sitemap
+## Sitemap{#sitemap}
 
 The website consists of four main pages:
 
@@ -45,9 +66,9 @@ The website consists of four main pages:
 
 ![Sitemap of Leigh's Professional Portolio Website](assets/sitemap/sitemapv3.png)
 
-## Functionality and Features
+## Walkthrough{#walkthrough}
 
-### Home
+### Home{#home}
 
 The home page (index.html) is the main landing page, and its main content is prominent links to the other three sections.
 
@@ -56,7 +77,7 @@ On mobile, the content is arranged in a narrower space, but the hexagon arrangem
 ![Home Page on Mobile and Tablet](assets/screenshots/home/home-mobile-tablet.png)
 ![Home Page on Desktop](assets/screenshots/home/home-desktop.png)
 
-### Navigation
+### Navigation{#navigation}
 
 Navigation from the home page to the other three pages is accomplished via the prominent hexagonal links forming the main content of the page (see above).
 
@@ -76,7 +97,7 @@ Each menu item is colour coded to the colours used on the destination page.
 
 On tablet and desktop, a floating fixed navbar is provided at the top of the screen.  On tablet it is centred, and on desktop it is aligned to the right of the screen.  A semi transparent mask is provided below the nav controls to improve contrast with the underlying content when the page is scrolled.
 
-### About Me
+### About Me{#aboutme}
 
 ![About Me page on mobile and tablet](assets/screenshots/aboutme/aboutme-mobile-tablet.png)
 ![About Me page on desktop](assets/screenshots/aboutme/aboutme-desktop.png)
@@ -85,21 +106,21 @@ The "About Me" page (aboutme.html) provides a prospective employer with informat
 
 A link is provided so that a prospective employer may download a pdf version of my resume, however at this stage the pdf is only a placeholder.
 
-### Blog List
+### Blog List{#bloglist}
 
 The "Blog" page (blog.html) showcases my ability to create a functioning blog style website.  Real abridged entries from my 2016 travel blog are used as content in this demonstration.
 
 ![Blog page on Mobile and Tablet](assets/screenshots/blog/blog-mobile-tablet.png)
 
-The initial blog page provides a list of five blog entries, each depicted on a panel with an image, a heading, date published, and an introductory paragraph. On mobile these panels arrange their content vertically, and on tablet and desktop they change to horizontal.  The list, however, always runs down the page.  Each blog entry panel is implemented in its own article element, and is depicted in a different colour relating to its target page colour.
+The initial blog page provides a list of five blog entries, each depicted on a panel with an image, a heading, date published, and an introductory paragraph. On mobile these panels arrange their content vertically, and on tablet and desktop they change to horizontal.  The list, however, always runs down the page.  Each blog post summary panel is implemented in its own article element, and is depicted in a different colour relating to its target page colour.
 
 ![Blog page on Desktop](assets/screenshots/blog/blog-desktop.png)
 
 Each panel is a link providing access to the detail of that blog post.  There are five blog posts included, each on a separate page stored in the ./blog directory and named blog-post-#.html where # is a number 1-5.
 
-### Blog Entry
+### Blog Post{#blogpost}
 
-Following the links provided by the panels on the inital blog page will direct the browser to one of these five blog post pages.  On each blog post page, the entire blog post is implemented as one big article, and the text of the blog post is interspersed with images which are inside figure elements.
+Following the links provided by the panels on the inital blog page will direct the browser to one of the five blog post pages.  On each blog post page, the entire blog post is implemented as one big article, and the text of the blog post is interspersed with images which are inside figure elements.
 
 ![Blog post page on Mobile and Tablet](assets/screenshots/blog/blog-post-mobile-tablet.png)
 
@@ -109,7 +130,7 @@ On Desktop, some of these images are floated left or right so the paragraph text
 
 At the bottom of each blog post the hexagon icon link is reused to provide a quick way to go back to the Blog List Page.
 
-### Contact
+### Contact{#contact}
 
 The "Contact" page (contact.html) provides different methods for a prospective employer to get more information about my work, by providing external links to my online profiles on various social media and collaboration websites.
 
@@ -119,9 +140,61 @@ The "Contact" page (contact.html) provides different methods for a prospective e
 
 Links are presented in a honeycomb arrangement that adapts from mobile to tablet/desktop, and respond to touch/click/hover with inverted colours and growing slightly larger (see above).  All these links except the last icon (email) are external.
 
-### Email
+### Email{#email}
 
 ![Email page on Mobile and Tablet](assets/screenshots/contact/email-mobile-tablet.png)
 ![Email page on Desktop](assets/screenshots/contact/email-desktop.png)
 
 Clicking the last link takes the user to an internal page designed to allow the user to contact me via email.  A HTML Form is provided with fields for name, email, subject and message, and the hexagonal icon link component is reused as a submit button.  Unfortunately at this stage the form is not yet functional, because of server side scripting requirements to provide the email service.  Clicking the send button currently has no function.
+
+## Components{#components}
+
+### Text Components{#textcomponents}
+
+The following text based components are used on the site:
+
+1. Navigation Menu (mobile) / Navigation Bar (tablet and desktop).  
+This component is reused on all pages except the home page (index.html). Both are based on the same HTML, but CSS with @media queries switches the appearance between the two.
+
+2. Email form.   
+This component appears on the email page (email.html).  Even though this form is not actually functional, it is a styled component.  The default browser styling is largely overwitten to make the form appear similarly themed to the rest of the site.
+
+3. Blog Post Summary
+This component is repeated 5 times on the blog list page (blog.html).  It is a composite component with image and text arranged in nested divs using flexbox using an article element.
+
+4. Paragraph  
+The paragraph component is styled uniformly and used throughout the site, mostly on the "About Me" and "Blog Post" pages.
+
+### Graphical Components{#graphicalcomponents}
+
+1. Inline SVG Vector Handwritten Headings  
+These headings are used across the site for the main headings of each page.  SVG images can be added inline because they are also XML documents, very similar to HTML.  This enables them to be embeded into the document structure and be referenced and styled like HTML.  In particular the colour of each heading is styled dynamically and can be easily changed in css.  It is currently determined by a small amount of inline css which is different in every html document. A drop shadow effect is added in the css.
+
+2. Hexagon shape  
+This component is used extensively throughout the site. It appears in various sizes, and colours, in various implementations.  It is used as a basic shape, and as a border for images and icons.
+
+3. Hexagonal Figure  
+Building on the hexagon shape component, most images are presented inside a hexagonal shape with a border and glow effect, and enclosed in a figure element, with a figcaption for description.  These components appear on the "About Me" page and also on the "Blog List" page.
+
+4. Hexagonal link icon  
+Any graphical link across the site is implemented using this component.  The hexagonal link icon component is another extension of the hexagon shape component, with added animation effects for growing an hover/focus, and colour inversion of the icon inside the hexagon.  These components can be seen on the "About Me" page (PDF Resume link), on the "Contact" page (external site links), and on the "Email" page (send email button).
+
+5. Floating photos
+To ensure that images can be viewed without being clipped, hexagon shapes are not used to display phots on the "Blog Post" pages.  These floating image components are used instead, and are again enclosed in a figure element with a figcaption.  Some of these photos are styled to float left or right and allow paragraph text to flow around.
+
+## Subresource Integrity (SRI){#sri}
+
+In the head element of each page are links to two css files (styles.css and colours.css) and one javascript file (script.js) and these links all contain SHA-512 hashes to ensure data integrity and security.
+
+The Font "Roboto", provided by Google Fonts, is also linked in all pages, however as per [this discussion on Google Fonts github page](https://github.com/google/fonts/issues/473) SRI is not supported for Google Fonts because the css returned to the browser is dynamically optimised based on the requesting User Agent (operating system and browser identifying information).  Therefore SRI is not implemented on these links.
+
+## Accessibility{#accessibility}
+
+To enable navigation by users with screen readers, all images contain alt attributes with descriptions.
+### Handwritten Headings
+
+The SVG Headings are images and could pose a problem to a screen reader attempting to navigate the page structure. To try and alleviate this problem, the SVG headings are still wrapped in h1 tags to indicate their function in the structure of the page.
+
+Normally the alt attribute would provide the description to a screen reader but for SVG specifically a title element is included as the first child of the svg element to provide a description of the image to the user and a screen reader.  Title elements are included on all inline SVG images to maximise accessibility.
+
+More info: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/title) and [W3C](https://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements)

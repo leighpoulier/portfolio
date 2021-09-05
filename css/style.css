@@ -234,6 +234,9 @@ body {
 
 /* General SVG fill and stroke colours */
 
+
+/* Used by SVG Handwritten Heading component */
+
 svg.fill-blue path {
     fill: var(--blue-2);
 }
@@ -299,7 +302,10 @@ svg.stroke-auto path {
 }
 
 
-/* General rules for makign neon glow effect */
+/* General rules for making a neon glow effect */
+
+
+/* Used by SVG Handwritten Heading component */
 
 .glow-blue {
     filter: drop-shadow(0px 0px 10px #054DF4);
@@ -392,7 +398,7 @@ svg.stroke-auto path {
 }
 
 
-/* required to hide the svg definitions of clip paths and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
+/* required to hide the svg definitions of hexagonal clip paths and stop them from appearing in the page flow.  display: none doesn't work because the definitions are lost */
 
 .defs-clip-svg {
     position: absolute;
@@ -401,6 +407,9 @@ svg.stroke-auto path {
 
 
 /* BEGIN HEADER & NAV */
+
+
+/* Navigation Menu and Navigation Bar component */
 
 header {
     display: flex;
@@ -422,10 +431,8 @@ header {
 #hamburger-container,
 #close-button-container {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    /* height: calc(5rem * var(--maths-root3on2)); */
     height: 5rem;
     width: 5rem;
     clip-path: url("#clip-hex-horizontal-square");
@@ -462,7 +469,7 @@ header {
 }
 
 
-/* individual bars of hamburger and close button */
+/* Individual bars of hamburger and close button */
 
 .hamburger-bar,
 .close-button-bar {
@@ -518,7 +525,6 @@ header {
     bottom: 3px;
     left: 3px;
     z-index: -1;
-    /* border-radius: 50%; */
     clip-path: url("#clip-hex-horizontal-square");
     background: none;
     opacity: 0;
@@ -541,7 +547,6 @@ header {
     bottom: 0;
     left: 0;
     z-index: 1;
-    /* border-radius: 50%; */
     clip-path: url("#clip-hex-horizontal-square");
 }
 
@@ -638,7 +643,7 @@ nav a {
 }
 
 
-/* Lots of colours for different colours nav menu items */
+/* Lots of colours for different coloured nav menu items */
 
 nav a:hover {
     background: var(--page-theme-foreground);
@@ -695,19 +700,20 @@ nav a span.nav-break::after {
 /* Nav bar behaviour for tablet/desktop */
 
 @media screen and (min-width: 550px) {
-    #navbar {
-        display: none;
-    }
-    #close-button-container {
-        display: none;
-    }
+    #navbar,
+    #close-button-container,
     #nav-menu-modal-overlay {
         display: none;
     }
+    /* #close-button-container {
+        display: none;
+    } */
+    /* #nav-menu-modal-overlay {
+        display: none;
+    } */
     #nav-container {
         flex-direction: row;
         justify-content: center;
-        /* background-color: var(--green-2); */
         height: unset;
         transition: unset;
         background-color: #0000007F;
@@ -722,11 +728,8 @@ nav a span.nav-break::after {
         opacity: 1;
     }
     nav {
-        /* box-shadow: 0px 0px 20px 20px #0000007f; */
-        /* background-color: #0000007F; */
         box-shadow: unset;
         background-color: unset;
-        /* padding: 2rem; */
     }
     nav ul {
         flex-direction: row;
@@ -744,6 +747,13 @@ nav a span.nav-break::after {
     nav li:nth-child(even) {
         top: calc(0.5*(var(--hex-nav-height) + var(--hex-nav-gap)));
     }
+    nav a,
+    nav a .nav-link-inner {
+        position: absolute;
+        clip-path: url(#clip-hex-horizontal-preshaped);
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
     nav a {
         background-color: var(--blue-2);
         color: var(--blue-2);
@@ -751,28 +761,21 @@ nav a span.nav-break::after {
         padding: unset;
         width: var(--hex-nav-width);
         height: var(--hex-nav-height);
-        clip-path: url(#clip-hex-horizontal-preshaped);
         text-align: center;
-        position: absolute;
         transition-property: transform;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
     }
     nav a .nav-link-inner {
-        position: absolute;
+        /* position: absolute; */
         top: var(--hex-nav-border-x);
         right: var(--hex-nav-border-y);
         bottom: var(--hex-nav-border-x);
         left: var(--hex-nav-border-y);
         background-color: black;
-        clip-path: url(#clip-hex-horizontal-preshaped);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition-property: background-color, color;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
     }
     nav a span.nav-break::after {
         content: '';
@@ -886,7 +889,14 @@ footer p {
 }
 
 
-/* Paragraphs appearing as direct children of articles or sections (as used on Blog List, Blog Page, About Me etc */
+/* VARIOUS TEXT STYLES */
+
+
+/* Paragraph components appearing as direct children of articles or sections (as used on Blog List, Blog Page, About Me etc */
+
+p {
+    color: #CFCFCF;
+}
 
 article>p,
 section>p,
@@ -895,8 +905,24 @@ article>ul {
     line-height: 1.4;
 }
 
+@media screen and (min-width: 550px) {
+    article>p,
+    article>ul,
+    section>p {
+        font-size: 1.2rem;
+        margin: 2rem 0;
+        text-align: justify;
+    }
+}
 
-/* Multicolumn used for ul on about me page */
+p.indent,
+ul.indent {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+
+/* Multicolumn Unordered list used on about me page */
 
 @media screen and (min-width: 400px) {
     ul.multi-column {
@@ -911,68 +937,14 @@ article>ul {
 }
 
 
-/* Figure component used extensively for captioned images on Blog, About Me pages. */
-
-figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
-    clear: both;
-}
-
-
-/* No bottom border if last item on page */
-
-figure:last-child {
-    margin: 2rem auto 0;
-}
-
-
-/* float left or right in tablet */
-
-@media screen and (min-width: 550px) {
-    figure.float-left {
-        float: left;
-        margin-right: 3rem;
-        ;
-    }
-    figure.float-right {
-        float: right;
-        margin-left: 3rem;
-        ;
-    }
-    article>p,
-    article>ul,
-    section>p {
-        font-size: 1.2rem;
-        margin: 2rem 0;
-        text-align: justify;
-    }
-}
-
-
-/* float left or right in desktop */
-
-@media screen and (min-width: 1000px) {
-    figure.float-left-desktop {
-        float: left;
-        margin-right: 3rem;
-    }
-    figure.float-right-desktop {
-        float: right;
-        margin-left: 3rem;
-    }
-}
-
-.img-border-outer.hex,
-.img-border-inner.hex {
-    clip-path: url(#clip-hex-horizontal-preshaped);
-}
+/* change appearance of links */
 
 a {
     text-decoration: none;
+}
+
+a:visited {
+    color: var(--page-theme-background);
 }
 
 a,
@@ -984,6 +956,11 @@ h4,
 h5,
 h6 {
     color: var(--article-foreground, var(--page-theme-foreground, grey));
+}
+
+figcaption {
+    font-size: 1.2rem;
+    padding: 0.5rem;
 }
 
 
@@ -1004,31 +981,65 @@ article>h6 {
     margin-top: 3rem;
 }
 
+
+/* But Prevent excessive margins when headings follow one another */
+
 section>h2+h3,
 article>h2+h3 {
     margin-top: 1rem;
 }
 
 
-/* disable browser colouring of links */
+/* Hexagonal Figure component used for captioned images on Blog, About Me pages. */
 
-a:visited {
-    color: var(--page-theme-background);
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    clear: both;
 }
 
-p {
-    color: #CFCFCF;
+
+/* No bottom border if last item on page */
+
+figure:last-child {
+    margin: 2rem auto 0;
 }
 
-figcaption {
-    font-size: 1.2rem;
-    padding: 0.5rem;
+
+/* Floating image component */
+
+
+/* float left or right in tablet */
+
+@media screen and (min-width: 550px) {
+    figure.float-left {
+        float: left;
+        margin-right: 3rem;
+        max-width: 50%;
+    }
+    figure.float-right {
+        float: right;
+        margin-left: 3rem;
+        max-width: 50%;
+    }
 }
 
-p.indent,
-ul.indent {
-    margin-left: 3rem;
-    margin-right: 3rem;
+
+/* float figure left or right in desktop view */
+
+@media screen and (min-width: 1000px) {
+    figure.float-left-desktop {
+        float: left;
+        margin-right: 3rem;
+        max-width: 50%;
+    }
+    figure.float-right-desktop {
+        float: right;
+        margin-left: 3rem;
+    }
 }
 
 article>section {
@@ -1099,10 +1110,13 @@ article>section {
 /* END GENERIC MAIN */
 
 
+/* BEGIN GENERIC HEX */
+
+
 /* Colouring, positioning, scaling of hexagons */
 
 
-/* BEGIN GENERIC HEX */
+/* Includes styling for hexagon shape, hexagonal figure, and hexagon icon link component */
 
 .hex,
 .hex-inner,
@@ -1142,9 +1156,11 @@ article>section {
 .hex {
     height: 100%;
     width: 100%;
-    /* background-color: red; */
     position: absolute;
 }
+
+
+/* Styling for hexagonal icon link component */
 
 
 /* Inversion of hexagon colours and colours if child elements to give animation for external links etc */
@@ -1245,7 +1261,7 @@ article>section {
 }
 
 
-/* Grows some hexes on desktop */
+/* Enlarges some hexes on desktop view */
 
 @media screen and (min-width: 1000px) {
     .hex-container.primary-desktop {
@@ -1272,37 +1288,37 @@ article>section {
     right: var(--hex-icon-border-x);
 }
 
-.hex-link .hex-inner {
-    transition-property: background-color;
+.hex-link .hex-inner,
+.hex svg path {
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
 
+.hex-link .hex-inner {
+    transition-property: background-color;
+}
+
 .hex svg path {
     transition-property: fill, stroke;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
 }
 
 .hex-inner svg {
     max-width: 90%;
 }
 
-.hex-container.icon svg {
+.hex-container.icon svg,
+.hex-inner img,
+.hex-link {
     height: 100%;
     width: 100%;
 }
 
 .hex-inner img {
-    height: 100%;
-    width: 100%;
     object-fit: cover;
 }
 
 .hex-link {
     display: block;
-    height: 100%;
-    width: 100%;
 }
 
 .hex-arrangement-anchor {
@@ -1609,7 +1625,19 @@ article>section {
 /* BEGIN BLOG SPECIFIC STYLES */
 
 
+/* Blog Post Summary components */
+
+
 /* Dark transparentish card behind each blog post summary */
+
+
+/* List of blog posts on Blog page */
+
+.list-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 
 .blog-post-summary {
     padding: 1rem;
@@ -1673,6 +1701,10 @@ article>section {
 
 .blog-post-summary-info-text {
     flex-grow: 1;
+}
+
+.blog-post-summary-info-text p {
+    text-align: justify;
 }
 
 .blog-post-summary-info-data p {
@@ -1740,23 +1772,13 @@ article.green {
 }
 
 
-/* List of blog posts on Blog page */
-
-.list-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.blog-post-summary-info-text p {
-    text-align: justify;
-}
-
-
 /* END BLOG POST SPECIFIC STYLES */
 
 
 /* BEGIN EMAIL SPECIFIC STYLES */
+
+
+/* Styling for email form component */
 
 
 /* Container to align entire email form */
@@ -1806,6 +1828,9 @@ textarea {
     font-weight: bold;
 }
 
+
+/* Colouring email form comoponent to align with site theme */
+
 #email-form input,
 #email-form textarea {
     background-color: transparent;
@@ -1818,6 +1843,9 @@ textarea {
 #email-form textarea {
     resize: vertical;
 }
+
+
+/* Ac */
 
 #email-form input[type=text],
 #email-form textarea {
