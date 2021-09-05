@@ -203,6 +203,7 @@ Any graphical link across the site is implemented using this component.  The hex
 To ensure that images can be viewed without being clipped, hexagon shapes are not used to display phots on the "Blog Post" pages.  These floating image components are used instead, and are again enclosed in a figure element with a figcaption.  Some of these photos are styled to float left or right and allow paragraph text to flow around.
 
     ![Floating photo](docs/floating-photo.png)
+    ![Floating Photo on desktop](docs/floating-photo-desktop.png)
 
 ## Subresource Integrity (SRI)
 
